@@ -90,8 +90,29 @@
 	];
 
 	import { galleries } from "$lib/data/galleries";
-	
+
 	const portfolios = galleries.slice(0, 6);
+
+	const handleWhatsAppSubmit = (e: Event) => {
+		e.preventDefault();
+		const form = e.target as HTMLFormElement;
+		const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+		const service = (form.elements.namedItem("service") as HTMLSelectElement).value;
+		const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+		if (!name) return;
+
+		const text = `Halo Service Bangunan ID,
+Saya ${name}, ingin berkonsultasi mengenai layanan *${service}*.
+
+Pesan / Detail Kebutuhan:
+${message || "-"}
+`;
+
+		const waNumber = "628180908809"; // +62 818 0908809
+		const encodedText = encodeURIComponent(text);
+		window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
+	};
 </script>
 
 <svelte:head>
@@ -667,35 +688,22 @@
 					</h3>
 					<form
 						class="space-y-5"
-						onsubmit={(e) => e.preventDefault()}
+						onsubmit={handleWhatsAppSubmit}
 					>
-						<div class="grid grid-cols-2 gap-5">
-							<div>
-								<label
-									for="name"
-									class="block text-sm font-medium text-slate-700 mb-2"
-									>Nama Lengkap</label
-								>
-								<input
-									type="text"
-									id="name"
-									class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
-									placeholder="Cth: Budi"
-								/>
-							</div>
-							<div>
-								<label
-									for="phone"
-									class="block text-sm font-medium text-slate-700 mb-2"
-									>No. HP / WA</label
-								>
-								<input
-									type="tel"
-									id="phone"
-									class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
-									placeholder="Cth: 0812..."
-								/>
-							</div>
+						<div>
+							<label
+								for="name"
+								class="block text-sm font-medium text-slate-700 mb-2"
+								>Nama Lengkap</label
+							>
+							<input
+								type="text"
+								name="name"
+								id="name"
+								required
+								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
+								placeholder="Cth: Budi"
+							/>
 						</div>
 						<div>
 							<label
@@ -704,6 +712,7 @@
 								>Layanan yang Dibutuhkan</label
 							>
 							<select
+								name="service"
 								id="service"
 								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
 							>
@@ -721,6 +730,7 @@
 								>Pesan / Detail Kebutuhan</label
 							>
 							<textarea
+								name="message"
 								id="message"
 								rows="4"
 								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
