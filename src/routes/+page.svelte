@@ -90,12 +90,12 @@
 	];
 
 	const portfolios = [
-		"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-		"https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-		"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-		"https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-		"https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-		"https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+		"/images/gallery/gallery1.jpeg",
+		"/images/gallery/gallery2.jpeg",
+		"/images/gallery/gallery3.jpeg",
+		"/images/gallery/gallery4.jpeg",
+		"/images/gallery/gallery5.jpeg",
+		"/images/gallery/gallery6.jpeg",
 	];
 </script>
 
@@ -503,7 +503,7 @@
 				</p>
 			</div>
 			<a
-				href="#!"
+				href="/gallery"
 				class="shrink-0 hidden md:inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-xl font-bold transition-colors"
 			>
 				Lihat Semua Proyek <ArrowRight size={18} />
@@ -541,7 +541,7 @@
 
 		<div class="mt-10 text-center md:hidden">
 			<a
-				href="#!"
+				href="/gallery"
 				class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-6 py-3 rounded-xl font-bold transition-colors"
 			>
 				Lihat Semua Proyek <ArrowRight size={18} />

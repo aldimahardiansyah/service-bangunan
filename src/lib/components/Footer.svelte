@@ -33,28 +33,28 @@
 			<ul class="space-y-3 text-sm">
 				<li>
 					<a
-						href="#beranda"
+						href="/#beranda"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
 						><span class="text-blue-400">›</span> Beranda</a
 					>
 				</li>
 				<li>
 					<a
-						href="#tentang"
+						href="/#tentang"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
 						><span class="text-blue-400">›</span> Tentang Kami</a
 					>
 				</li>
 				<li>
 					<a
-						href="#layanan"
+						href="/#layanan"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
 						><span class="text-blue-400">›</span> Core Services</a
 					>
 				</li>
 				<li>
 					<a
-						href="#cara-kerja"
+						href="/#cara-kerja"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
 						><span class="text-blue-400">›</span> Cara Kerja</a
 					>
