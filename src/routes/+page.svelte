@@ -89,14 +89,9 @@
 		},
 	];
 
-	const portfolios = [
-		"/images/gallery/gallery1.jpeg",
-		"/images/gallery/gallery2.jpeg",
-		"/images/gallery/gallery3.jpeg",
-		"/images/gallery/gallery4.jpeg",
-		"/images/gallery/gallery5.jpeg",
-		"/images/gallery/gallery6.jpeg",
-	];
+	import { galleries } from "$lib/data/galleries";
+	
+	const portfolios = galleries.slice(0, 6);
 </script>
 
 <svelte:head>
@@ -511,13 +506,13 @@
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{#each portfolios as image, i}
+			{#each portfolios as item}
 				<div
 					class="group relative rounded-2xl overflow-hidden aspect-[4/3]"
 				>
 					<img
-						src={image}
-						alt={`Proyek ${i + 1}`}
+						src={item.src}
+						alt={item.title}
 						class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 						loading="lazy"
 					/>
@@ -527,12 +522,12 @@
 						<h3
 							class="text-xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
 						>
-							Fasilitas Proyek {i + 1}
+							{item.title}
 						</h3>
 						<p
 							class="text-yellow-400 font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
 						>
-							Maintenance & Upgrade
+							{item.category}
 						</p>
 					</div>
 				</div>

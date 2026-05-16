@@ -1,0 +1,23 @@
+export const galleries = [
+	{ id: 1, src: "/images/gallery/gallery1.jpeg", title: "Fasilitas Proyek 1", category: "Hard Services" },
+	{ id: 2, src: "/images/gallery/gallery2.jpeg", title: "Fasilitas Proyek 2", category: "Soft Services" },
+	{ id: 3, src: "/images/gallery/gallery3.jpeg", title: "Fasilitas Proyek 3", category: "Specialized" },
+	{ id: 4, src: "/images/gallery/gallery4.jpeg", title: "Fasilitas Proyek 4", category: "Project" },
+	{ id: 5, src: "/images/gallery/gallery5.jpeg", title: "Fasilitas Proyek 5", category: "Hard Services" },
+	{ id: 6, src: "/images/gallery/gallery6.jpeg", title: "Fasilitas Proyek 6", category: "Soft Services" },
+	{ id: 7, src: "/images/gallery/gallery7.jpeg", title: "Fasilitas Proyek 7", category: "Specialized" },
+	{ id: 8, src: "/images/gallery/gallery8.jpeg", title: "Fasilitas Proyek 8", category: "Project" },
+	{ id: 9, src: "/images/gallery/gallery9.jpeg", title: "Fasilitas Proyek 9", category: "Hard Services" },
+	{ id: 10, src: "/images/gallery/gallery10.jpeg", title: "Fasilitas Proyek 10", category: "Soft Services" },
+	{ id: 11, src: "/images/gallery/gallery11.jpeg", title: "Fasilitas Proyek 11", category: "Specialized" },
+	{ id: 12, src: "/images/gallery/gallery12.jpeg", title: "Fasilitas Proyek 12", category: "Project" },
+	{ id: 13, src: "/images/gallery/gallery13.jpeg", title: "Fasilitas Proyek 13", category: "Hard Services" },
+	{ id: 14, src: "/images/gallery/gallery14.jpeg", title: "Fasilitas Proyek 14", category: "Soft Services" },
+	{ id: 15, src: "/images/gallery/gallery15.jpeg", title: "Fasilitas Proyek 15", category: "Specialized" },
+	{ id: 16, src: "/images/gallery/gallery16.jpeg", title: "Fasilitas Proyek 16", category: "Project" },
+	{ id: 17, src: "/images/gallery/gallery17.jpeg", title: "Fasilitas Proyek 17", category: "Hard Services" },
+	{ id: 18, src: "/images/gallery/gallery18.jpeg", title: "Fasilitas Proyek 18", category: "Soft Services" },
+	{ id: 19, src: "/images/gallery/gallery19.jpeg", title: "Fasilitas Proyek 19", category: "Specialized" },
+	{ id: 20, src: "/images/gallery/gallery20.jpeg", title: "Fasilitas Proyek 20", category: "Project" },
+	{ id: 21, src: "/images/gallery/gallery21.jpeg", title: "Fasilitas Proyek 21", category: "Hard Services" }
+];

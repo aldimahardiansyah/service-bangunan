@@ -11,29 +11,7 @@
 		"Project",
 	];
 
-	const galleries = [
-		{ id: 1, src: "/images/gallery/gallery1.jpeg", title: "Fasilitas Proyek 1", category: "Hard Services" },
-		{ id: 2, src: "/images/gallery/gallery2.jpeg", title: "Fasilitas Proyek 2", category: "Soft Services" },
-		{ id: 3, src: "/images/gallery/gallery3.jpeg", title: "Fasilitas Proyek 3", category: "Specialized" },
-		{ id: 4, src: "/images/gallery/gallery4.jpeg", title: "Fasilitas Proyek 4", category: "Project" },
-		{ id: 5, src: "/images/gallery/gallery5.jpeg", title: "Fasilitas Proyek 5", category: "Hard Services" },
-		{ id: 6, src: "/images/gallery/gallery6.jpeg", title: "Fasilitas Proyek 6", category: "Soft Services" },
-		{ id: 7, src: "/images/gallery/gallery7.jpeg", title: "Fasilitas Proyek 7", category: "Specialized" },
-		{ id: 8, src: "/images/gallery/gallery8.jpeg", title: "Fasilitas Proyek 8", category: "Project" },
-		{ id: 9, src: "/images/gallery/gallery9.jpeg", title: "Fasilitas Proyek 9", category: "Hard Services" },
-		{ id: 10, src: "/images/gallery/gallery10.jpeg", title: "Fasilitas Proyek 10", category: "Soft Services" },
-		{ id: 11, src: "/images/gallery/gallery11.jpeg", title: "Fasilitas Proyek 11", category: "Specialized" },
-		{ id: 12, src: "/images/gallery/gallery12.jpeg", title: "Fasilitas Proyek 12", category: "Project" },
-		{ id: 13, src: "/images/gallery/gallery13.jpeg", title: "Fasilitas Proyek 13", category: "Hard Services" },
-		{ id: 14, src: "/images/gallery/gallery14.jpeg", title: "Fasilitas Proyek 14", category: "Soft Services" },
-		{ id: 15, src: "/images/gallery/gallery15.jpeg", title: "Fasilitas Proyek 15", category: "Specialized" },
-		{ id: 16, src: "/images/gallery/gallery16.jpeg", title: "Fasilitas Proyek 16", category: "Project" },
-		{ id: 17, src: "/images/gallery/gallery17.jpeg", title: "Fasilitas Proyek 17", category: "Hard Services" },
-		{ id: 18, src: "/images/gallery/gallery18.jpeg", title: "Fasilitas Proyek 18", category: "Soft Services" },
-		{ id: 19, src: "/images/gallery/gallery19.jpeg", title: "Fasilitas Proyek 19", category: "Specialized" },
-		{ id: 20, src: "/images/gallery/gallery20.jpeg", title: "Fasilitas Proyek 20", category: "Project" },
-		{ id: 21, src: "/images/gallery/gallery21.jpeg", title: "Fasilitas Proyek 21", category: "Hard Services" }
-	];
+	import { galleries } from "$lib/data/galleries";
 
 	let filteredGalleries = $derived(
 		activeCategory === "Semua"
@@ -100,43 +78,27 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 			{#each filteredGalleries as item (item.id)}
 				<div
-					class="group relative rounded-[2rem] overflow-hidden aspect-[4/3] shadow-xl shadow-slate-200/50 bg-white"
+					class="group relative rounded-2xl overflow-hidden aspect-[4/3]"
 				>
 					<img
 						src={item.src}
 						alt={item.title}
-						class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+						class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 						loading="lazy"
 					/>
-
-					<!-- Hover Overlay Layer -->
 					<div
-						class="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/40 transition-colors duration-500 flex items-center justify-center"
-					></div>
-
-					<!-- Bottom Text Layer -->
-					<div
-						class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent"
+						class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
 					>
-						<div
-							class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500"
+						<h3
+							class="text-xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
 						>
-							<div
-								class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow-400 text-blue-900 text-xs font-bold mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150"
-							>
-								<Briefcase size={12} />
-								{item.category}
-							</div>
-							<h3
-								class="text-xl font-bold text-white flex items-center justify-between"
-							>
-								{item.title}
-								<ChevronRight
-									size={20}
-									class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 text-yellow-400"
-								/>
-							</h3>
-						</div>
+							{item.title}
+						</h3>
+						<p
+							class="text-yellow-400 font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
+						>
+							{item.category}
+						</p>
 					</div>
 				</div>
 			{/each}
