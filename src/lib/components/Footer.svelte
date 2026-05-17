@@ -10,7 +10,7 @@
 		<div class="space-y-6">
 			<a href="/" class="flex items-center gap-2">
 				<img
-					src="/images/logo.png"
+					src="/images/logo-pda.jpeg"
 					alt="logo service bangunan"
 					class="h-25"
 				/>
