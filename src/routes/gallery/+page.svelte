@@ -5,7 +5,18 @@
 
 	import { galleries } from "$lib/data/galleries";
 
-	const categories = ["Semua", ...new Set(galleries.map(g => g.category))];
+	const categories = [
+		"Semua",
+		"Plumbing PPR",
+		"Purifikasi Trafo",
+		"Pipa Hydrant",
+		"Diesel Maintenance",
+		"Pengecatan Gedung",
+		"Architectural Works",
+		"Construction & MEP",
+		"Project Takeover",
+		"Lighting & Plafon"
+	];
 
 	let filteredGalleries = $derived(
 		activeCategory === "Semua"
