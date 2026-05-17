@@ -91,7 +91,14 @@
 
 	import { galleries } from "$lib/data/galleries";
 
-	const portfolios = galleries.slice(0, 6);
+	const portfolios: typeof galleries = [];
+	const seenCategories = new Set();
+	for (const item of galleries) {
+		if (!seenCategories.has(item.category) && portfolios.length < 6) {
+			seenCategories.add(item.category);
+			portfolios.push(item);
+		}
+	}
 
 	const handleWhatsAppSubmit = (e: Event) => {
 		e.preventDefault();
