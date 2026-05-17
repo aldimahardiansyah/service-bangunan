@@ -226,7 +226,7 @@ ${message || "-"}
 					class="hidden lg:block absolute -inset-4 bg-yellow-400 rounded-3xl transform rotate-3 scale-105 opacity-20 -z-10"
 				></div>
 				<img
-					src="/images/portofolio/ELECTRICAL PANEL/gambar2.jpeg"
+					src="/images/overview.jpeg"
 					alt="Company Overview"
 					class="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
 				/>
