@@ -8,11 +8,18 @@
 	>
 		<!-- Brand & About -->
 		<div class="space-y-6">
+			<h4
+				class="text-white font-bold text-lg mb-6 flex items-center gap-2"
+			>
+				<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+				Bagian dari Group
+			</h4>
+
 			<a href="/" class="flex items-center gap-2">
 				<img
 					src="/images/logo-pda.jpeg"
 					alt="logo service bangunan"
-					class="h-25"
+					class="h-25 rounded"
 				/>
 			</a>
 			<p class="text-blue-200 text-sm leading-relaxed">
