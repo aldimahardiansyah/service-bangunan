@@ -3,15 +3,9 @@
 
 	let activeCategory = $state("Semua");
 
-	const categories = [
-		"Semua",
-		"Hard Services",
-		"Soft Services",
-		"Specialized",
-		"Project",
-	];
-
 	import { galleries } from "$lib/data/galleries";
+
+	const categories = ["Semua", ...new Set(galleries.map(g => g.category))];
 
 	let filteredGalleries = $derived(
 		activeCategory === "Semua"
