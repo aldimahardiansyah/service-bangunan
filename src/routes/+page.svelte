@@ -96,9 +96,14 @@
 	const handleWhatsAppSubmit = (e: Event) => {
 		e.preventDefault();
 		const form = e.target as HTMLFormElement;
-		const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-		const service = (form.elements.namedItem("service") as HTMLSelectElement).value;
-		const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+		const name = (form.elements.namedItem("name") as HTMLInputElement)
+			.value;
+		const service = (
+			form.elements.namedItem("service") as HTMLSelectElement
+		).value;
+		const message = (
+			form.elements.namedItem("message") as HTMLTextAreaElement
+		).value;
 
 		if (!name) return;
 
@@ -109,7 +114,7 @@ Pesan / Detail Kebutuhan:
 ${message || "-"}
 `;
 
-		const waNumber = "628180908809"; // +62 818 0908809
+		const waNumber = "6281809098809";
 		const encodedText = encodeURIComponent(text);
 		window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
 	};
@@ -686,10 +691,7 @@ ${message || "-"}
 					<h3 class="text-2xl font-bold text-slate-800 mb-6">
 						Kirim Pesan
 					</h3>
-					<form
-						class="space-y-5"
-						onsubmit={handleWhatsAppSubmit}
-					>
+					<form class="space-y-5" onsubmit={handleWhatsAppSubmit}>
 						<div>
 							<label
 								for="name"
