@@ -15,7 +15,8 @@
 		"Architectural Works",
 		"Construction & MEP",
 		"Project Takeover",
-		"Lighting & Plafon"
+		"Lighting & Plafon",
+		"Electrical Panel",
 	];
 
 	let filteredGalleries = $derived(

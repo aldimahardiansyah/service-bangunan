@@ -139,7 +139,7 @@ ${message || "-"}
 	<!-- Background Image & Overlay -->
 	<div class="absolute inset-0 z-0">
 		<img
-			src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+			src="/images/hero-image.jpeg"
 			alt="Construction Hero"
 			class="w-full h-full object-cover"
 		/>
@@ -226,7 +226,7 @@ ${message || "-"}
 					class="hidden lg:block absolute -inset-4 bg-yellow-400 rounded-3xl transform rotate-3 scale-105 opacity-20 -z-10"
 				></div>
 				<img
-					src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+					src="/images/portofolio/ELECTRICAL PANEL/gambar2.jpeg"
 					alt="Company Overview"
 					class="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
 				/>

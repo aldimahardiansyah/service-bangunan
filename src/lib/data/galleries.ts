@@ -238,5 +238,29 @@ export const galleries = [
 		"src": "/images/portofolio/LIGHTING & PLAFON/Foto 3.png",
 		"title": "Proyek Lighting & Plafon",
 		"category": "Lighting & Plafon"
+	},
+	{
+		"id": 41,
+		"src": "/images/portofolio/ELECTRICAL PANEL/gambar1.jpeg",
+		"title": "Proyek Electrical Panel",
+		"category": "Electrical Panel"
+	},
+	{
+		"id": 42,
+		"src": "/images/portofolio/ELECTRICAL PANEL/gambar2.jpeg",
+		"title": "Proyek Electrical Panel",
+		"category": "Electrical Panel"
+	},
+	{
+		"id": 43,
+		"src": "/images/portofolio/ELECTRICAL PANEL/gambar3.jpeg",
+		"title": "Proyek Electrical Panel",
+		"category": "Electrical Panel"
+	},
+	{
+		"id": 44,
+		"src": "/images/portofolio/ELECTRICAL PANEL/gambar4.jpeg",
+		"title": "Proyek Electrical Panel",
+		"category": "Electrical Panel"
 	}
 ];
