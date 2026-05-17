@@ -154,6 +154,6 @@
 		<p>
 			&copy; {new Date().getFullYear()} Service Bangunan ID. All rights reserved.
 		</p>
-		<p>Integrated Facility Management Terpercaya</p>
+		<p>Building Mechanical, Electrical, Plumbing & Civil Specialist</p>
 	</div>
 </footer>

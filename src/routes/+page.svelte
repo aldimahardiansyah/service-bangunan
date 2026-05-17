@@ -625,7 +625,7 @@ ${message || "-"}
 									Mobile Number
 								</p>
 								<p class="text-xl font-bold text-white">
-									+62.818 0908809
+									+62 858 0060 2797
 								</p>
 							</div>
 						</div>
