@@ -17,6 +17,7 @@
 		"Project Takeover",
 		"Lighting & Plafon",
 		"Electrical Panel",
+		"TPS dan Limbah Sampah",
 	];
 
 	let filteredGalleries = $derived(
