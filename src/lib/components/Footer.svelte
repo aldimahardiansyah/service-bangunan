@@ -19,7 +19,7 @@
 				<img
 					src="/images/logo-pda.webp"
 					alt="logo service bangunan"
-					class="h-25 rounded"
+					class="h-25 w-auto rounded"
 					width="420"
 					height="267"
 					loading="lazy"
