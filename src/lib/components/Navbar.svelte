@@ -15,9 +15,12 @@
 		<!-- Logo -->
 		<a href="/" class="flex items-center gap-2 group">
 			<img
-				src="/images/logo.png"
+				src="/images/logo.webp"
 				alt="logo service bangunan"
 				class="h-15"
+				width="222"
+				height="316"
+				fetchpriority="high"
 			/>
 		</a>
 

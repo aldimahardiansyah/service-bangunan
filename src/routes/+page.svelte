@@ -129,6 +129,13 @@ ${message || "-"}
 
 <svelte:head>
 	<title>Beranda | Service Bangunan ID</title>
+	<link
+		rel="preload"
+		as="image"
+		href="/images/hero-image.webp"
+		type="image/webp"
+		fetchpriority="high"
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -139,9 +146,13 @@ ${message || "-"}
 	<!-- Background Image & Overlay -->
 	<div class="absolute inset-0 z-0">
 		<img
-			src="/images/hero-image.jpeg"
+			src="/images/hero-image.webp"
 			alt="Construction Hero"
 			class="w-full h-full object-cover"
+			width="1600"
+			height="900"
+			fetchpriority="high"
+			decoding="async"
 		/>
 		<div
 			class="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/80 to-transparent"
@@ -226,9 +237,13 @@ ${message || "-"}
 					class="hidden lg:block absolute -inset-4 bg-yellow-400 rounded-3xl transform rotate-3 scale-105 opacity-20 -z-10"
 				></div>
 				<img
-					src="/images/overview.jpeg"
+					src="/images/overview.webp"
 					alt="Company Overview"
 					class="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
+					width="1000"
+					height="1000"
+					loading="lazy"
+					decoding="async"
 				/>
 				<div
 					class="absolute -bottom-8 -right-8 bg-blue-600 text-white p-8 rounded-3xl shadow-xl hidden md:block"

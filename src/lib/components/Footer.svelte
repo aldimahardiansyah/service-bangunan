@@ -17,9 +17,13 @@
 
 			<a href="/" class="flex items-center gap-2">
 				<img
-					src="/images/logo-pda.jpeg"
+					src="/images/logo-pda.webp"
 					alt="logo service bangunan"
 					class="h-25 rounded"
+					width="420"
+					height="267"
+					loading="lazy"
+					decoding="async"
 				/>
 			</a>
 			<p class="text-blue-200 text-sm leading-relaxed">
