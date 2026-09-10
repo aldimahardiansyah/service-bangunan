@@ -51,6 +51,11 @@
 				class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
 				>Portofolio</a
 			>
+			<a
+				href="/artikel"
+				class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+				>Artikel</a
+			>
 		</div>
 
 		<!-- CTA Desktop -->
@@ -107,6 +112,11 @@
 				href="/#portofolio"
 				class="text-base font-medium text-slate-700 py-2 border-b border-slate-50"
 				onclick={toggleMenu}>Portofolio</a
+			>
+			<a
+				href="/artikel"
+				class="text-base font-medium text-slate-700 py-2 border-b border-slate-50"
+				onclick={toggleMenu}>Artikel</a
 			>
 			<a
 				href="/#kontak"

@@ -1,3 +1,5 @@
+import { artikelList } from '$lib/data/artikel';
+
 export async function GET({ url }) {
 	const pages = [
 		'',
@@ -6,20 +8,30 @@ export async function GET({ url }) {
 		'/#cara-kerja',
 		'/#portofolio',
 		'/#kontak',
-		'/gallery'
+		'/gallery',
+		'/artikel'
 	];
 
-	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages
-	.map(
+	const staticUrls = pages.map(
 		(page) => `  <url>
     <loc>${url.origin}${page}</loc>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`
-	)
-	.join('\n')}
+	);
+
+	const artikelUrls = artikelList.map(
+		(artikel) => `  <url>
+    <loc>${url.origin}/artikel/${artikel.slug}</loc>
+    <lastmod>${artikel.date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`
+	);
+
+	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${[...staticUrls, ...artikelUrls].join('\n')}
 </urlset>`;
 
 	return new Response(sitemap, {

@@ -9,14 +9,7 @@
 <svelte:head>
 	<title>Service Bangunan ID | Solusi Konstruksi & Renovasi Terpercaya</title>
 	<link rel="icon" type="image/ico" href={favicon} />
-	<meta
-		name="description"
-		content="Layanan jasa konstruksi, renovasi rumah, desain interior, dan perbaikan bangunan terbaik dan terpercaya di Indonesia."
-	/>
-	<meta
-		name="keywords"
-		content="konstruksi, renovasi, perbaikan rumah, desain interior, jasa bangun rumah, service bangunan"
-	/>
+	<!-- description & keywords didefinisikan per halaman agar tidak duplikat. -->
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">

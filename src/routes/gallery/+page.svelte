@@ -33,6 +33,7 @@
 		name="description"
 		content="Galeri lengkap portofolio proyek dan layanan Integrated Facility Management dari Service Bangunan ID."
 	/>
+	<link rel="canonical" href="https://www.servicebangunan.id/gallery" />
 </svelte:head>
 
 <!-- Header -->

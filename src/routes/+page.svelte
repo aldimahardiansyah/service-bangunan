@@ -129,6 +129,15 @@ ${message || "-"}
 
 <svelte:head>
 	<title>Beranda | Service Bangunan ID</title>
+	<meta
+		name="description"
+		content="Layanan jasa konstruksi, renovasi rumah, desain interior, dan perbaikan bangunan terbaik dan terpercaya di Indonesia."
+	/>
+	<meta
+		name="keywords"
+		content="konstruksi, renovasi, perbaikan rumah, desain interior, jasa bangun rumah, service bangunan"
+	/>
+	<link rel="canonical" href="https://www.servicebangunan.id/" />
 	<link
 		rel="preload"
 		as="image"
