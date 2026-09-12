@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Folder kerja sumber artikel (docx + foto asli), tidak ikut ke repo
+assets-artikel/

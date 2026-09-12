@@ -10,6 +10,7 @@ export type Artikel = {
 	date: string;
 	cover: string;
 	coverAlt: string;
+	coverCredit: string;
 	html: string;
 	readingMinutes: number;
 };
@@ -56,6 +57,7 @@ export const artikelList: Artikel[] = Object.entries(files)
 			date: meta.date ?? '',
 			cover: meta.cover ?? '/images/overview.webp',
 			coverAlt: meta.coverAlt ?? meta.title ?? slug,
+			coverCredit: meta.coverCredit ?? '',
 			html: marked.parse(body, { async: false }) as string,
 			readingMinutes: readingMinutes(body)
 		};

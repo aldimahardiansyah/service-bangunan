@@ -109,14 +109,19 @@
 
 <section class="py-16 bg-slate-50 relative z-20">
 	<div class="container max-w-3xl">
-		<img
-			src={artikel.cover}
-			alt={artikel.coverAlt}
-			class="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg mb-12"
-			width="1000"
-			height="563"
-			fetchpriority="high"
-		/>
+		<figure class="mb-12">
+			<img
+				src={artikel.cover}
+				alt={artikel.coverAlt}
+				class="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
+				fetchpriority="high"
+			/>
+			{#if artikel.coverCredit}
+				<figcaption class="mt-3 text-xs text-slate-400 text-center">
+					Foto: {artikel.coverCredit}
+				</figcaption>
+			{/if}
+		</figure>
 
 		<div
 			class="prose prose-slate max-w-none
