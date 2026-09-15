@@ -6,6 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="google-site-verification" content="Hg128Is3hPDTKa_t81Ikr1QqP7vl9d4yNBgyV0L1C-s" />
 	<link rel="preload" href="/fonts/outfit-variable.woff2" as="font" type="font/woff2" crossorigin />
+
+	<!-- Google Analytics 4. send_page_view dimatikan karena SvelteKit berpindah
+	     halaman tanpa reload; page_view dikirim manual di +layout.svelte. -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1HWL6411HR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-1HWL6411HR', { send_page_view: false });
+	</script>
 	%sveltekit.head%
 </head>
 
