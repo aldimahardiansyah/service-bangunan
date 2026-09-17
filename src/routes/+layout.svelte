@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Service Bangunan ID | Solusi Konstruksi & Renovasi Terpercaya</title>
+	<title>Service Bangunan ID | Solusi Facility Management & Maintenance Gedung Terpercaya</title>
 	<link rel="icon" type="image/ico" href={favicon} />
 	<!-- description & keywords didefinisikan per halaman agar tidak duplikat. -->
 </svelte:head>

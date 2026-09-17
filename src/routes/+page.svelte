@@ -128,10 +128,10 @@ ${message || "-"}
 </script>
 
 <svelte:head>
-	<title>Beranda | Service Bangunan ID</title>
+	<title>Service Bangunan ID | Solusi Facility Management & Maintenance Gedung Terpercaya</title>
 	<meta
 		name="description"
-		content="Layanan jasa konstruksi, renovasi rumah, desain interior, dan perbaikan bangunan terbaik dan terpercaya di Indonesia."
+		content="Layanan terpadu facility management, perawatan rutin, dan pemeliharaan aset bangunan komersial dengan standar keselamatan bersama tim profesional."
 	/>
 	<meta
 		name="keywords"
