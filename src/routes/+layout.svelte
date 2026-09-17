@@ -2,7 +2,6 @@
 	import "./layout.css";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
-	import favicon from "$lib/assets/service-bagunan.ico";
 	import { afterNavigate } from "$app/navigation";
 	import { tick } from "svelte";
 
@@ -23,7 +22,6 @@
 
 <svelte:head>
 	<title>Service Bangunan ID | Solusi Facility Management & Maintenance Gedung Terpercaya</title>
-	<link rel="icon" type="image/ico" href={favicon} />
 	<!-- description & keywords didefinisikan per halaman agar tidak duplikat. -->
 </svelte:head>
 
