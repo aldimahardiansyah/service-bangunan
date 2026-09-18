@@ -3,7 +3,7 @@
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	import { afterNavigate } from "$app/navigation";
-	import { tick } from "svelte";
+	import { onMount, tick } from "svelte";
 
 	let { children } = $props();
 
@@ -17,6 +17,30 @@
 			page_location: location.href,
 			page_path: location.pathname + location.search,
 		});
+	});
+
+	// Klik tautan kontak dicatat sebagai event terpisah agar mudah dicari di GA4.
+	// Lokasi tombol diambil dari atribut data-lokasi terdekat (footer, kontak, ...).
+	onMount(() => {
+		const onClick = (e: MouseEvent) => {
+			const a = (e.target as Element | null)?.closest("a[href]");
+			if (!a || typeof gtag !== "function") return;
+			const href = a.getAttribute("href") ?? "";
+			const name = href.startsWith("mailto:")
+				? "klik_email"
+				: href.startsWith("tel:")
+					? "klik_telepon"
+					: /^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)
+						? "klik_whatsapp"
+						: null;
+			if (!name) return;
+			gtag("event", name, {
+				lokasi: a.closest("[data-lokasi]")?.getAttribute("data-lokasi") ?? "lainnya",
+				link_url: href,
+			});
+		};
+		document.addEventListener("click", onClick);
+		return () => document.removeEventListener("click", onClick);
 	});
 </script>
 

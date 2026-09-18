@@ -121,6 +121,13 @@ Pesan / Detail Kebutuhan:
 ${message || "-"}
 `;
 
+		if (typeof gtag === "function") {
+			gtag("event", "klik_whatsapp", {
+				lokasi: "form_konsultasi",
+				layanan: service,
+			});
+		}
+
 		const waNumber = "6281809098809";
 		const encodedText = encodeURIComponent(text);
 		window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
@@ -642,7 +649,7 @@ ${message || "-"}
 						keselamatan. Hubungi kami untuk konsultasi.
 					</p>
 
-					<div class="space-y-6">
+					<div class="space-y-6" data-lokasi="kontak">
 						<div class="flex items-start gap-4">
 							<div
 								class="w-12 h-12 shrink-0 rounded-full bg-blue-500 flex items-center justify-center"
@@ -655,9 +662,12 @@ ${message || "-"}
 								>
 									Mobile Number
 								</p>
-								<p class="text-xl font-bold text-white">
+								<a
+									href="tel:+6285800602797"
+									class="block text-xl font-bold text-white hover:text-yellow-400 transition-colors"
+								>
 									+62 858 0060 2797
-								</p>
+								</a>
 							</div>
 						</div>
 
@@ -673,9 +683,12 @@ ${message || "-"}
 								>
 									Email Address
 								</p>
-								<p class="text-lg font-bold text-white">
+								<a
+									href="mailto:servicebangunan@gmail.com"
+									class="block text-lg font-bold text-white hover:text-yellow-400 transition-colors"
+								>
 									servicebangunan@gmail.com
-								</p>
+								</a>
 							</div>
 						</div>
 
@@ -697,7 +710,11 @@ ${message || "-"}
 									Tangerang Selatan 15412
 								</p>
 								<p class="text-sm font-semibold text-white">
-									Phone 085800602797
+									Phone <a
+										href="tel:+6285800602797"
+										class="hover:text-yellow-400 transition-colors"
+										>085800602797</a
+									>
 								</p>
 							</div>
 							<div>
@@ -715,7 +732,11 @@ ${message || "-"}
 									Jakarta Barat 11180
 								</p>
 								<p class="text-sm font-semibold text-white">
-									Phone 081809098809
+									Phone <a
+										href="tel:+6281809098809"
+										class="hover:text-yellow-400 transition-colors"
+										>081809098809</a
+									>
 								</p>
 							</div>
 						</div>

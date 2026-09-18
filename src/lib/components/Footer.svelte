@@ -121,7 +121,7 @@
 				<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
 				Kontak Kami
 			</h4>
-			<ul class="space-y-4 text-sm">
+			<ul class="space-y-4 text-sm" data-lokasi="footer">
 				<li class="flex items-start gap-3">
 					<MapPin size={18} class="text-yellow-400 shrink-0 mt-0.5" />
 					<div class="text-blue-200">
@@ -142,11 +142,19 @@
 				</li>
 				<li class="flex items-center gap-3">
 					<Phone size={18} class="text-yellow-400 shrink-0" />
-					<span class="text-blue-200">+62 818 0908809</span>
+					<a
+						href="tel:+628180908809"
+						class="text-blue-200 hover:text-yellow-400 transition-colors"
+						>+62 818 0908809</a
+					>
 				</li>
 				<li class="flex items-center gap-3">
 					<Mail size={18} class="text-yellow-400 shrink-0" />
-					<span class="text-blue-200">servicebangunan@gmail.com</span>
+					<a
+						href="mailto:servicebangunan@gmail.com"
+						class="text-blue-200 hover:text-yellow-400 transition-colors"
+						>servicebangunan@gmail.com</a
+					>
 				</li>
 			</ul>
 		</div>
