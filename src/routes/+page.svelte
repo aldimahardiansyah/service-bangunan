@@ -14,6 +14,7 @@
 		Phone,
 		Mail,
 		MapPin,
+		MessageCircle,
 	} from "lucide-svelte";
 
 	const coreServices = [
@@ -90,6 +91,7 @@
 	];
 
 	import { galleries } from "$lib/data/galleries";
+	import { WA_DEFAULT } from "$lib/data/kontak";
 
 	const portfolios: typeof galleries = [];
 	const seenCategories = new Set();
@@ -100,38 +102,6 @@
 		}
 	}
 
-	const handleWhatsAppSubmit = (e: Event) => {
-		e.preventDefault();
-		const form = e.target as HTMLFormElement;
-		const name = (form.elements.namedItem("name") as HTMLInputElement)
-			.value;
-		const service = (
-			form.elements.namedItem("service") as HTMLSelectElement
-		).value;
-		const message = (
-			form.elements.namedItem("message") as HTMLTextAreaElement
-		).value;
-
-		if (!name) return;
-
-		const text = `Halo Service Bangunan ID,
-Saya ${name}, ingin berkonsultasi mengenai layanan *${service}*.
-
-Pesan / Detail Kebutuhan:
-${message || "-"}
-`;
-
-		if (typeof gtag === "function") {
-			gtag("event", "klik_whatsapp", {
-				lokasi: "form_konsultasi",
-				layanan: service,
-			});
-		}
-
-		const waNumber = "6281809098809";
-		const encodedText = encodeURIComponent(text);
-		window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
-	};
 </script>
 
 <svelte:head>
@@ -662,12 +632,9 @@ ${message || "-"}
 								>
 									Mobile Number
 								</p>
-								<a
-									href="tel:+6285800602797"
-									class="block text-xl font-bold text-white hover:text-yellow-400 transition-colors"
-								>
+								<p class="text-xl font-bold text-white">
 									+62 858 0060 2797
-								</a>
+								</p>
 							</div>
 						</div>
 
@@ -710,11 +677,7 @@ ${message || "-"}
 									Tangerang Selatan 15412
 								</p>
 								<p class="text-sm font-semibold text-white">
-									Phone <a
-										href="tel:+6285800602797"
-										class="hover:text-yellow-400 transition-colors"
-										>085800602797</a
-									>
+									Phone 085800602797
 								</p>
 							</div>
 							<div>
@@ -732,10 +695,12 @@ ${message || "-"}
 									Jakarta Barat 11180
 								</p>
 								<p class="text-sm font-semibold text-white">
-									Phone <a
-										href="tel:+6281809098809"
-										class="hover:text-yellow-400 transition-colors"
-										>081809098809</a
+									WhatsApp <a
+										href={WA_DEFAULT}
+										target="_blank"
+										rel="noopener"
+										class="underline decoration-yellow-400/60 underline-offset-2 hover:text-yellow-400 transition-colors"
+										>0818 0909 8809</a
 									>
 								</p>
 							</div>
@@ -743,66 +708,35 @@ ${message || "-"}
 					</div>
 				</div>
 
-				<!-- Contact Form -->
-				<div class="bg-white rounded-3xl p-8 shadow-xl mt-8 lg:mt-0">
-					<h3 class="text-2xl font-bold text-slate-800 mb-6">
-						Kirim Pesan
+				<!-- CTA WhatsApp -->
+				<div
+					class="bg-white rounded-3xl p-8 md:p-10 shadow-xl mt-8 lg:mt-0 flex flex-col justify-center text-center"
+					data-lokasi="cta_kontak"
+				>
+					<div
+						class="w-16 h-16 mx-auto rounded-2xl bg-green-50 flex items-center justify-center mb-6"
+					>
+						<MessageCircle size={30} class="text-green-600" />
+					</div>
+					<h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">
+						Konsultasi Gratis via WhatsApp
 					</h3>
-					<form class="space-y-5" onsubmit={handleWhatsAppSubmit}>
-						<div>
-							<label
-								for="name"
-								class="block text-sm font-medium text-slate-700 mb-2"
-								>Nama Lengkap</label
-							>
-							<input
-								type="text"
-								name="name"
-								id="name"
-								required
-								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
-								placeholder="Cth: Budi"
-							/>
-						</div>
-						<div>
-							<label
-								for="service"
-								class="block text-sm font-medium text-slate-700 mb-2"
-								>Layanan yang Dibutuhkan</label
-							>
-							<select
-								name="service"
-								id="service"
-								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
-							>
-								<option>Hard Services</option>
-								<option>Soft Services</option>
-								<option>Specialized Services</option>
-								<option>Project & Improvement</option>
-								<option>Lainnya</option>
-							</select>
-						</div>
-						<div>
-							<label
-								for="message"
-								class="block text-sm font-medium text-slate-700 mb-2"
-								>Pesan / Detail Kebutuhan</label
-							>
-							<textarea
-								name="message"
-								id="message"
-								rows="4"
-								class="w-full rounded-xl border-slate-200 bg-slate-50 focus:border-blue-600 focus:ring-blue-600 transition-colors"
-								placeholder="Ceritakan detail kebutuhan fasilitas Anda..."
-							></textarea>
-						</div>
-						<button
-							type="submit"
-							class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-4 rounded-xl transition-colors shadow-lg shadow-yellow-500/20"
-						>
-							Kirim Pesan Sekarang
-						</button>
-					</form>
+					<p class="text-slate-600 leading-relaxed mb-8">
+						Ceritakan kebutuhan gedung Anda langsung ke tim kami. Kami
+						bantu tentukan lingkup pekerjaan dan estimasi biayanya.
+					</p>
+					<a
+						href={WA_DEFAULT}
+						target="_blank"
+						rel="noopener"
+						class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-green-600/20 inline-flex items-center justify-center gap-2"
+					>
+						<MessageCircle size={20} />
+						Chat via WhatsApp
+					</a>
+					<p class="text-sm text-slate-500 mt-4">
+						Balasan pada jam kerja, Senin sampai Sabtu.
+					</p>
 				</div>
 			</div>
 		</div>

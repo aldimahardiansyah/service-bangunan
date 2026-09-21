@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { MapPin, Phone, Mail } from "lucide-svelte";
+	import { MapPin, MessageCircle, Mail } from "lucide-svelte";
+	import { WA_DEFAULT, WA_DISPLAY } from "$lib/data/kontak";
 </script>
 
 <footer class="bg-blue-900 text-blue-50 pt-20 pb-10">
@@ -141,11 +142,13 @@
 					</div>
 				</li>
 				<li class="flex items-center gap-3">
-					<Phone size={18} class="text-yellow-400 shrink-0" />
+					<MessageCircle size={18} class="text-yellow-400 shrink-0" />
 					<a
-						href="tel:+628180908809"
+						href={WA_DEFAULT}
+						target="_blank"
+						rel="noopener"
 						class="text-blue-200 hover:text-yellow-400 transition-colors"
-						>+62 818 0908809</a
+						>{WA_DISPLAY}</a
 					>
 				</li>
 				<li class="flex items-center gap-3">
