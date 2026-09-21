@@ -92,6 +92,65 @@
 
 	import { galleries } from "$lib/data/galleries";
 	import { WA_DEFAULT } from "$lib/data/kontak";
+	import { artikelList, formatTanggal } from "$lib/data/artikel";
+
+	const SITE = "https://www.servicebangunan.id";
+	const artikelTerbaru = artikelList.slice(0, 3);
+
+	const skemaPerusahaan = {
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": `${SITE}/#organization`,
+				name: "Service Bangunan ID",
+				legalName: "PT Puri Dewi Agung",
+				url: SITE,
+				logo: { "@type": "ImageObject", url: `${SITE}/icon-192.png`, width: 192, height: 192 },
+				image: `${SITE}/images/hero-image.webp`,
+				description:
+					"Perusahaan Integrated Facility Management (IFM) yang menangani engineering, maintenance, cleaning, utilitas, hingga project dan improvement untuk gedung komersial dan fasilitas industri.",
+				email: "servicebangunan@gmail.com",
+				telephone: "+6281809098809",
+				areaServed: { "@type": "Country", name: "Indonesia" },
+				address: [
+					{
+						"@type": "PostalAddress",
+						name: "Office & Workshop",
+						streetAddress: "Jl. H.Gadung 2A No 99, Pondok Ranji, Ciputat",
+						addressLocality: "Tangerang Selatan",
+						postalCode: "15412",
+						addressRegion: "Banten",
+						addressCountry: "ID",
+					},
+					{
+						"@type": "PostalAddress",
+						name: "Tech Office Hub",
+						streetAddress: "LTC GF 1 Blok C27 no 1, Jl. Hayam Wuruk No 127",
+						addressLocality: "Jakarta Barat",
+						postalCode: "11180",
+						addressRegion: "DKI Jakarta",
+						addressCountry: "ID",
+					},
+				],
+				contactPoint: {
+					"@type": "ContactPoint",
+					contactType: "customer service",
+					telephone: "+6281809098809",
+					email: "servicebangunan@gmail.com",
+					availableLanguage: ["id", "en"],
+				},
+			},
+			{
+				"@type": "WebSite",
+				"@id": `${SITE}/#website`,
+				url: SITE,
+				name: "Service Bangunan ID",
+				inLanguage: "id-ID",
+				publisher: { "@id": `${SITE}/#organization` },
+			},
+		],
+	};
 
 	const portfolios: typeof galleries = [];
 	const seenCategories = new Set();
@@ -115,6 +174,38 @@
 		content="konstruksi, renovasi, perbaikan rumah, desain interior, jasa bangun rumah, service bangunan"
 	/>
 	<link rel="canonical" href="https://www.servicebangunan.id/" />
+
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:title"
+		content="Service Bangunan ID | Solusi Facility Management & Maintenance Gedung Terpercaya"
+	/>
+	<meta
+		property="og:description"
+		content="Layanan terpadu facility management, perawatan rutin, dan pemeliharaan aset bangunan komersial dengan standar keselamatan bersama tim profesional."
+	/>
+	<meta property="og:url" content="https://www.servicebangunan.id/" />
+	<meta
+		property="og:image"
+		content="https://www.servicebangunan.id/images/hero-image.webp"
+	/>
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:site_name" content="Service Bangunan ID" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta
+		name="twitter:title"
+		content="Service Bangunan ID | Solusi Facility Management & Maintenance Gedung Terpercaya"
+	/>
+	<meta
+		name="twitter:description"
+		content="Layanan terpadu facility management, perawatan rutin, dan pemeliharaan aset bangunan komersial dengan standar keselamatan bersama tim profesional."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://www.servicebangunan.id/images/hero-image.webp"
+	/>
+
+	{@html `<script type="application/ld+json">${JSON.stringify(skemaPerusahaan)}</script>`}
 	<link
 		rel="preload"
 		as="image"
@@ -585,6 +676,82 @@
 </section>
 
 <!-- CTA / Contact Section -->
+<!-- Artikel Terbaru -->
+<section id="artikel" class="py-20 md:py-28 bg-white">
+	<div class="container">
+		<div
+			class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+		>
+			<div class="max-w-2xl">
+				<div
+					class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm mb-6"
+				>
+					<span class="w-2 h-2 rounded-full bg-yellow-400"></span> Wawasan
+				</div>
+				<h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
+					Artikel Terbaru
+				</h2>
+				<p class="text-slate-600 text-lg">
+					Panduan praktis seputar facility management, maintenance
+					gedung, dan pengelolaan aset bangunan.
+				</p>
+			</div>
+			<a
+				href="/artikel"
+				class="shrink-0 hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-bold transition-colors"
+			>
+				Lihat Semua Artikel <ArrowRight size={18} />
+			</a>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			{#each artikelTerbaru as artikel (artikel.slug)}
+				<article
+					class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 flex flex-col"
+				>
+					<a
+						href="/artikel/{artikel.slug}"
+						class="block aspect-[16/9] overflow-hidden"
+					>
+						<img
+							src={artikel.cover}
+							alt={artikel.coverAlt}
+							class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+							loading="lazy"
+							decoding="async"
+						/>
+					</a>
+					<div class="p-6 flex flex-col grow">
+						<h3 class="text-lg font-bold text-slate-900 mb-3 leading-snug">
+							<a
+								href="/artikel/{artikel.slug}"
+								class="hover:text-blue-600 transition-colors"
+								>{artikel.title}</a
+							>
+						</h3>
+						<p class="text-slate-600 text-sm leading-relaxed mb-5 grow">
+							{artikel.excerpt}
+						</p>
+						<span class="text-xs text-slate-500">
+							{formatTanggal(artikel.date)} · {artikel.readingMinutes} menit
+							baca
+						</span>
+					</div>
+				</article>
+			{/each}
+		</div>
+
+		<div class="mt-10 md:hidden">
+			<a
+				href="/artikel"
+				class="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-xl font-bold transition-colors"
+			>
+				Lihat Semua Artikel <ArrowRight size={18} />
+			</a>
+		</div>
+	</div>
+</section>
+
 <section id="kontak" class="py-20 md:py-28 bg-slate-50">
 	<div class="container">
 		<div
