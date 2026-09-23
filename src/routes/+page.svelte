@@ -90,7 +90,8 @@
 	];
 
 	import { galleries } from "$lib/data/galleries";
-	import { WA_DEFAULT } from "$lib/data/kontak";
+	import { waLink, WA_SAPAAN_UMUM } from "$lib/data/kontak";
+	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { artikelList, formatTanggal } from "$lib/data/artikel";
 
@@ -863,7 +864,7 @@
 								</p>
 								<p class="text-sm font-semibold text-white">
 									WhatsApp <a
-										href={WA_DEFAULT}
+										href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
 										target="_blank"
 										rel="noopener"
 										class="underline decoration-yellow-400/60 underline-offset-2 hover:text-yellow-400 transition-colors"
@@ -893,7 +894,7 @@
 						bantu tentukan lingkup pekerjaan dan estimasi biayanya.
 					</p>
 					<a
-						href={WA_DEFAULT}
+						href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
 						target="_blank"
 						rel="noopener"
 						class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-green-600/20 inline-flex items-center justify-center gap-2"

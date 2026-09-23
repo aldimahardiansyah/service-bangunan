@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { MapPin, Mail } from "lucide-svelte";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
-	import { WA_DEFAULT, WA_DISPLAY } from "$lib/data/kontak";
+	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
+	import { page } from "$app/state";
 </script>
 
 <footer class="bg-blue-900 text-blue-50 pt-20 pb-10">
@@ -145,7 +146,7 @@
 				<li class="flex items-center gap-3">
 					<IkonWhatsApp size={18} class="text-yellow-400 shrink-0" />
 					<a
-						href={WA_DEFAULT}
+						href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
 						target="_blank"
 						rel="noopener"
 						class="text-blue-200 hover:text-yellow-400 transition-colors"

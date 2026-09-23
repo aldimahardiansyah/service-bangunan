@@ -2,10 +2,17 @@
 	import { X } from "lucide-svelte";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { waLink } from "$lib/data/kontak";
+	import { page } from "$app/state";
 
 	const pilihan = [
-		"Halo, saya mau konsultasi",
-		"Halo, apakah barang ini ready?",
+		{
+			label: "Saya mau konsultasi",
+			pesan: "Halo Service Bangunan ID! 👋\nSaya menemukan website Anda dan ingin berkonsultasi soal perawatan gedung. Boleh dibantu?",
+		},
+		{
+			label: "Apakah barang ini ready?",
+			pesan: "Halo Service Bangunan ID! 👋\nSaya sedang melihat website Anda dan ingin menanyakan ketersediaan barang ini. Apakah ready?",
+		},
 	];
 
 	let terbuka = $state(false);
@@ -43,10 +50,10 @@
 				</p>
 			</div>
 			<ul class="p-2">
-				{#each pilihan as pesan}
+				{#each pilihan as item}
 					<li>
 						<a
-							href={waLink(pesan)}
+							href={waLink(item.pesan, page.url.pathname)}
 							target="_blank"
 							rel="noopener"
 							data-lokasi="tombol_melayang"
@@ -57,7 +64,7 @@
 								size={18}
 								class="shrink-0 mt-0.5 text-green-600"
 							/>
-							<span>{pesan}</span>
+							<span>{item.label}</span>
 						</a>
 					</li>
 				{/each}
