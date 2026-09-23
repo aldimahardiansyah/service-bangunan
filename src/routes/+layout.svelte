@@ -2,6 +2,7 @@
 	import "./layout.css";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+	import TombolWhatsApp from "$lib/components/TombolWhatsApp.svelte";
 	import { afterNavigate } from "$app/navigation";
 	import { onMount, tick } from "svelte";
 
@@ -56,3 +57,5 @@
 	</main>
 	<Footer />
 </div>
+
+<TombolWhatsApp />
