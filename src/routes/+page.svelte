@@ -14,7 +14,6 @@
 		Phone,
 		Mail,
 		MapPin,
-		MessageCircle,
 	} from "lucide-svelte";
 
 	const coreServices = [
@@ -92,6 +91,7 @@
 
 	import { galleries } from "$lib/data/galleries";
 	import { WA_DEFAULT } from "$lib/data/kontak";
+	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { artikelList, formatTanggal } from "$lib/data/artikel";
 
 	const SITE = "https://www.servicebangunan.id";
@@ -883,7 +883,7 @@
 					<div
 						class="w-16 h-16 mx-auto rounded-2xl bg-green-50 flex items-center justify-center mb-6"
 					>
-						<MessageCircle size={30} class="text-green-600" />
+						<IkonWhatsApp size={30} class="text-green-600" />
 					</div>
 					<h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">
 						Konsultasi Gratis via WhatsApp
@@ -898,7 +898,7 @@
 						rel="noopener"
 						class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-green-600/20 inline-flex items-center justify-center gap-2"
 					>
-						<MessageCircle size={20} />
+						<IkonWhatsApp size={20} />
 						Chat via WhatsApp
 					</a>
 					<p class="text-sm text-slate-500 mt-4">

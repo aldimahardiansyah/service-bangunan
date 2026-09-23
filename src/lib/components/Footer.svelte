@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { MapPin, MessageCircle, Mail } from "lucide-svelte";
+	import { MapPin, Mail } from "lucide-svelte";
+	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { WA_DEFAULT, WA_DISPLAY } from "$lib/data/kontak";
 </script>
 
@@ -142,7 +143,7 @@
 					</div>
 				</li>
 				<li class="flex items-center gap-3">
-					<MessageCircle size={18} class="text-yellow-400 shrink-0" />
+					<IkonWhatsApp size={18} class="text-yellow-400 shrink-0" />
 					<a
 						href={WA_DEFAULT}
 						target="_blank"

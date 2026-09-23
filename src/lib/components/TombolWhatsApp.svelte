@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { MessageCircle, X } from "lucide-svelte";
+	import { X } from "lucide-svelte";
+	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { waLink } from "$lib/data/kontak";
 
 	const pilihan = [
@@ -52,7 +53,7 @@
 							class="flex items-start gap-3 px-3 py-3 rounded-xl text-sm text-slate-700 hover:bg-green-50 hover:text-green-700 transition-colors"
 							onclick={() => (terbuka = false)}
 						>
-							<MessageCircle
+							<IkonWhatsApp
 								size={18}
 								class="shrink-0 mt-0.5 text-green-600"
 							/>
@@ -75,7 +76,7 @@
 		{#if terbuka}
 			<X size={26} />
 		{:else}
-			<MessageCircle size={26} />
+			<IkonWhatsApp size={26} />
 		{/if}
 	</button>
 </div>
