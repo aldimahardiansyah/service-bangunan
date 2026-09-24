@@ -46,7 +46,7 @@
 			desc: "Renovasi, upgrading dan modifikasi sistem untuk meningkatkan fungsi fasilitas existing.",
 		},
 		{
-			title: "Energy & Efficiency",
+			title: "Energy & Efficiency for Smart Building",
 			icon: Gauge,
 			desc: "Optimasi peralatan, efisiensi energi dan solusi penghematan operasional.",
 		},
