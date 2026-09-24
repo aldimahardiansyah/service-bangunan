@@ -1,12 +1,15 @@
 <script lang="ts">
 	import {
 		ArrowRight,
-		ArrowUpRight,
 		CheckCircle2,
-		ShieldCheck,
 		TrendingUp,
 		Sparkles,
 		Wrench,
+		Zap,
+		Flame,
+		Droplets,
+		Gauge,
+		Package,
 		ClipboardList,
 		Lightbulb,
 		Hammer,
@@ -18,43 +21,44 @@
 
 	const coreServices = [
 		{
-			title: "Hard Services (Engineering & Utilities)",
+			title: "MEP & Electrical",
+			icon: Zap,
+			desc: "Electrical, mechanical, HVAC, plumbing dan sistem utilitas bangunan.",
+		},
+		{
+			title: "Fire Protection",
+			icon: Flame,
+			desc: "Hydrant, sprinkler, fire alarm dan sistem keselamatan bangunan.",
+		},
+		{
+			title: "STP & Water Treatment",
+			icon: Droplets,
+			desc: "STP, wastewater treatment, water treatment dan optimasi sistem pengolahan air.",
+		},
+		{
+			title: "Building Maintenance",
 			icon: Wrench,
-			items: [
-				"Electrical system (panel control, trafo, genset)",
-				"HVAC system (chiller, AHU, FCU)",
-				"Plumbing & water system",
-				"STP & wastewater system",
-				"Fire protection system",
-			],
+			desc: "Preventive maintenance, corrective maintenance dan perbaikan fasilitas bangunan.",
 		},
 		{
-			title: "Soft Services",
+			title: "Renovation & Retrofitting",
+			icon: Hammer,
+			desc: "Renovasi, upgrading dan modifikasi sistem untuk meningkatkan fungsi fasilitas existing.",
+		},
+		{
+			title: "Energy & Efficiency",
+			icon: Gauge,
+			desc: "Optimasi peralatan, efisiensi energi dan solusi penghematan operasional.",
+		},
+		{
+			title: "Procurement & Supply",
+			icon: Package,
+			desc: "Pengadaan equipment, material dan spare parts untuk kebutuhan engineering.",
+		},
+		{
+			title: "Facility Services",
 			icon: Sparkles,
-			items: [
-				"Cleaning service",
-				"Landscaping & area hijau",
-				"Waste management",
-			],
-		},
-		{
-			title: "Specialized Services",
-			icon: ShieldCheck,
-			items: [
-				"Purifikasi transformator",
-				"Painting, Epoxy flooring",
-				"Waterproofing & coating",
-				"High-rise cleaning",
-			],
-		},
-		{
-			title: "Project & Improvement",
-			icon: TrendingUp,
-			items: [
-				"Renovasi & upgrading fasilitas",
-				"Energy efficiency program",
-				"System retrofitting",
-			],
+			desc: "Cleaning, landscaping, waste management dan layanan pendukung operasional bangunan.",
 		},
 	];
 
@@ -510,7 +514,7 @@
 				<span class="w-2 h-2 rounded-full bg-yellow-500"></span> IFM Scope
 			</div>
 			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
-				Core Services
+				Our Services
 			</h2>
 			<p class="text-slate-600 text-lg">
 				Solusi end-to-end terintegrasi untuk menjaga fungsi dan kualitas
@@ -529,24 +533,17 @@
 					>
 						<Icon size={64} strokeWidth={1.5} />
 					</div>
-					<div class="p-8 flex-grow">
+					<div class="p-8 flex-grow flex flex-col">
 						<h3
-							class="text-xl font-bold text-white mb-6 text-center leading-snug h-14 flex items-center justify-center"
+							class="text-lg font-bold text-white mb-4 text-center leading-snug"
 						>
 							{service.title}
 						</h3>
-						<ul class="space-y-3">
-							{#each service.items as item}
-								<li
-									class="flex items-start gap-2 text-blue-100 text-sm"
-								>
-									<div
-										class="mt-1.5 w-1.5 h-1.5 rounded-full bg-yellow-400 shrink-0"
-									></div>
-									<span class="leading-relaxed">{item}</span>
-								</li>
-							{/each}
-						</ul>
+						<p
+							class="text-blue-100 text-sm leading-relaxed text-center"
+						>
+							{service.desc}
+						</p>
 					</div>
 				</div>
 			{/each}
