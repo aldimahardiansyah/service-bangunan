@@ -90,7 +90,7 @@
 	];
 
 	import { galleries } from "$lib/data/galleries";
-	import { waLink, WA_SAPAAN_UMUM } from "$lib/data/kontak";
+	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
 	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { artikelList, formatTanggal } from "$lib/data/artikel";
@@ -112,7 +112,7 @@
 				description:
 					"Perusahaan Integrated Facility Management (IFM) yang menangani engineering, maintenance, cleaning, utilitas, hingga project dan improvement untuk gedung komersial dan fasilitas industri.",
 				email: "servicebangunan@gmail.com",
-				telephone: "+6281809098809",
+				telephone: "+6285800602797",
 				areaServed: { "@type": "Country", name: "Indonesia" },
 				address: [
 					{
@@ -137,7 +137,7 @@
 				contactPoint: {
 					"@type": "ContactPoint",
 					contactType: "customer service",
-					telephone: "+6281809098809",
+					telephone: "+6285800602797",
 					email: "servicebangunan@gmail.com",
 					availableLanguage: ["id", "en"],
 				},
@@ -800,9 +800,14 @@
 								>
 									Mobile Number
 								</p>
-								<p class="text-xl font-bold text-white">
-									+62 858 0060 2797
-								</p>
+								<a
+									href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
+									target="_blank"
+									rel="noopener"
+									class="block text-xl font-bold text-white hover:text-yellow-400 transition-colors"
+								>
+									{WA_DISPLAY}
+								</a>
 							</div>
 						</div>
 
@@ -845,7 +850,13 @@
 									Tangerang Selatan 15412
 								</p>
 								<p class="text-sm font-semibold text-white">
-									Phone 085800602797
+									WhatsApp <a
+										href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
+										target="_blank"
+										rel="noopener"
+										class="underline decoration-yellow-400/60 underline-offset-2 hover:text-yellow-400 transition-colors"
+										>085800602797</a
+									>
 								</p>
 							</div>
 							<div>
@@ -861,15 +872,6 @@
 									LTC GF 1 Blok C27 no 1<br />
 									Jl. Hayam Wuruk No 127<br />
 									Jakarta Barat 11180
-								</p>
-								<p class="text-sm font-semibold text-white">
-									WhatsApp <a
-										href={waLink(WA_SAPAAN_UMUM, page.url.pathname)}
-										target="_blank"
-										rel="noopener"
-										class="underline decoration-yellow-400/60 underline-offset-2 hover:text-yellow-400 transition-colors"
-										>0818 0909 8809</a
-									>
 								</p>
 							</div>
 						</div>
