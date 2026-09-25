@@ -63,7 +63,7 @@
 					<a
 						href="/#layanan"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
-						><span class="text-blue-400">›</span> Core Services</a
+						><span class="text-blue-400">›</span> Our Services</a
 					>
 				</li>
 				<li>
@@ -87,30 +87,66 @@
 			<ul class="space-y-3 text-sm">
 				<li>
 					<a
-						href="#!"
-						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
-						><span class="text-blue-400">›</span> Hard Services</a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>MEP & Electrical</span></a
 					>
 				</li>
 				<li>
 					<a
-						href="#!"
-						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
-						><span class="text-blue-400">›</span> Soft Services</a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Fire Protection</span></a
 					>
 				</li>
 				<li>
 					<a
-						href="#!"
-						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
-						><span class="text-blue-400">›</span> Specialized Services</a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>STP & Water Treatment</span></a
 					>
 				</li>
 				<li>
 					<a
-						href="#!"
-						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
-						><span class="text-blue-400">›</span> Project & Improvement</a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Building Maintenance</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Renovation & Retrofitting</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Energy & Efficiency for Smart Building</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Procurement & Supply</span></a
+					>
+				</li>
+				<li>
+					<a
+						href="/#layanan"
+						class="hover:text-yellow-400 transition-colors flex items-start gap-2"
+						><span class="text-blue-400 shrink-0">›</span>
+						<span>Facility Services</span></a
 					>
 				</li>
 			</ul>
