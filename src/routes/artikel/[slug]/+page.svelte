@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-svelte";
+	import {
+		ArrowLeft,
+		ArrowRight,
+		Calendar,
+		Clock,
+		LayoutGrid,
+	} from "lucide-svelte";
 	import { formatTanggal } from "$lib/data/artikel";
 
 	let { data } = $props();
@@ -7,6 +13,8 @@
 	// $derived agar isi ikut berubah saat pindah antar artikel tanpa reload.
 	let artikel = $derived(data.artikel);
 	let terkait = $derived(data.terkait);
+	let sebelumnya = $derived(data.sebelumnya);
+	let berikutnya = $derived(data.berikutnya);
 
 	const SITE = "https://www.servicebangunan.id";
 	let url = $derived(`${SITE}/artikel/${artikel.slug}`);
@@ -160,6 +168,50 @@
 			</div>
 		</div>
 
+		<!-- Navigasi antar artikel -->
+		{#if sebelumnya || berikutnya}
+			<nav
+				class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4"
+				aria-label="Artikel lainnya"
+			>
+				{#if berikutnya}
+					<a
+						href="/artikel/{berikutnya.slug}"
+						class="group bg-white rounded-2xl p-5 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all"
+					>
+						<span
+							class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 mb-2"
+						>
+							<ArrowLeft size={14} /> Artikel Berikutnya
+						</span>
+						<span
+							class="block font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors"
+							>{berikutnya.title}</span
+						>
+					</a>
+				{:else}
+					<div class="hidden sm:block"></div>
+				{/if}
+
+				{#if sebelumnya}
+					<a
+						href="/artikel/{sebelumnya.slug}"
+						class="group bg-white rounded-2xl p-5 border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all sm:text-right"
+					>
+						<span
+							class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 mb-2"
+						>
+							Artikel Sebelumnya <ArrowRight size={14} />
+						</span>
+						<span
+							class="block font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors"
+							>{sebelumnya.title}</span
+						>
+					</a>
+				{/if}
+			</nav>
+		{/if}
+
 		{#if terkait.length > 0}
 			<div class="mt-16">
 				<h2 class="text-2xl font-bold text-slate-900 mb-8">Baca Juga</h2>
@@ -185,5 +237,14 @@
 				</div>
 			</div>
 		{/if}
+
+		<div class="mt-12 text-center">
+			<a
+				href="/artikel"
+				class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-7 py-3.5 rounded-xl font-bold transition-colors"
+			>
+				<LayoutGrid size={18} /> Lihat Semua Artikel
+			</a>
+		</div>
 	</div>
 </section>

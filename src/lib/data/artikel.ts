@@ -163,6 +163,20 @@ export function artikelTerkait(slug: string, limit = 3): Artikel[] {
 	return [...sameCategory, ...others.filter((a) => a.category !== current.category)].slice(0, limit);
 }
 
+/** Artikel sebelum dan sesudah, untuk navigasi di bawah tulisan. */
+export function artikelTetangga(slug: string): {
+	sebelumnya: Artikel | null;
+	berikutnya: Artikel | null;
+} {
+	const i = artikelList.findIndex((a) => a.slug === slug);
+	if (i === -1) return { sebelumnya: null, berikutnya: null };
+	// Daftar urut dari yang terbaru, jadi indeks berikutnya justru lebih lama.
+	return {
+		sebelumnya: artikelList[i + 1] ?? null,
+		berikutnya: artikelList[i - 1] ?? null
+	};
+}
+
 export function formatTanggal(iso: string): string {
 	if (!iso) return '';
 	const d = new Date(iso);

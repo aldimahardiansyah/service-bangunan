@@ -2,6 +2,9 @@
 	import { MapPin, Mail } from "lucide-svelte";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
+	import { artikelList } from "$lib/data/artikel";
+
+	const artikelTerbaru = artikelList.slice(0, 4);
 	import { page } from "$app/state";
 </script>
 
@@ -71,6 +74,13 @@
 						href="/#cara-kerja"
 						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
 						><span class="text-blue-400">›</span> Cara Kerja</a
+					>
+				</li>
+				<li>
+					<a
+						href="/artikel"
+						class="hover:text-yellow-400 transition-colors flex items-center gap-2"
+						><span class="text-blue-400">›</span> Artikel</a
 					>
 				</li>
 			</ul>
@@ -197,6 +207,30 @@
 						>servicebangunan@gmail.com</a
 					>
 				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Artikel Terbaru -->
+	<div class="container mb-16">
+		<div class="border-t border-blue-800 pt-10">
+			<h4
+				class="text-white font-bold text-lg mb-6 flex items-center gap-2"
+			>
+				<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+				Artikel Terbaru
+			</h4>
+			<ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 text-sm">
+				{#each artikelTerbaru as artikel (artikel.slug)}
+					<li>
+						<a
+							href="/artikel/{artikel.slug}"
+							class="hover:text-yellow-400 transition-colors flex items-start gap-2 leading-relaxed"
+							><span class="text-blue-400 shrink-0">›</span>
+							<span>{artikel.title}</span></a
+						>
+					</li>
+				{/each}
 			</ul>
 		</div>
 	</div>

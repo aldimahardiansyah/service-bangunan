@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { getArtikel, artikelTerkait } from '$lib/data/artikel';
+import { getArtikel, artikelTerkait, artikelTetangga } from '$lib/data/artikel';
 import { artikelList } from '$lib/data/artikel';
 
 // Daftar artikel dipaginasi di sisi klien, jadi perayap prerender tidak bisa
@@ -11,5 +11,5 @@ export function entries() {
 export function load({ params }) {
 	const artikel = getArtikel(params.slug);
 	if (!artikel) error(404, 'Artikel tidak ditemukan');
-	return { artikel, terkait: artikelTerkait(params.slug) };
+	return { artikel, terkait: artikelTerkait(params.slug), ...artikelTetangga(params.slug) };
 }
