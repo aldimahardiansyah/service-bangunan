@@ -7,7 +7,7 @@ category: Facility Management
 date: 2026-09-21
 cover: /images/artikel/facility-management-kawasan-industri.webp
 coverAlt: facility management kawasan industri
-coverCredit: pexels.com/@sergey-sergeev
+coverCredit:
 ---
 
 Pengelolaan fasilitas di kawasan industri dan kompleks manufaktur memiliki tingkat kompleksitas dan tantangan yang jauh melebihi gedung perkantoran biasa. Di lingkungan industri, setiap detik penghentian operasional yang tidak terencana (unplanned downtime) akibat kegagalan utilitas—seperti mati listrik, gangguan pasokan air bersih, atau rusaknya sistem pengolahan limbah—dapat mengakibatkan kerugian finansial yang sangat besar akibat terhentinya lini produksi.
