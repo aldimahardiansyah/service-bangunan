@@ -174,19 +174,19 @@
 				<li class="flex items-start gap-3">
 					<MapPin size={18} class="text-yellow-400 shrink-0 mt-0.5" />
 					<div class="text-blue-200">
-						<strong>Office & Workshop:</strong><br />
-						Jl. H.Gadung 2A No 99<br />
-						Pondok Ranji, Ciputat<br />
-						Tangerang Selatan 15412
+						<strong>Jakarta:</strong><br />
+						Jalan Pahlawan Revolusi<br />
+						KBD 1 No.16<br />
+						Duren Sawit, Jakarta Timur
 					</div>
 				</li>
 				<li class="flex items-start gap-3">
 					<MapPin size={18} class="text-yellow-400 shrink-0 mt-0.5" />
 					<div class="text-blue-200">
-						<strong>Tech Office Hub:</strong><br />
-						LTC GF 1 Blok C27 no 1<br />
-						Jl. Hayam Wuruk No 127<br />
-						Jakarta Barat 11180
+						<strong>Solo:</strong><br />
+						Jalan Padjajaran Timur 2<br />
+						No.11 A<br />
+						Solo, Jawa Tengah
 					</div>
 				</li>
 				<li class="flex items-center gap-3">

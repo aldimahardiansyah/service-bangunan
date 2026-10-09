@@ -116,32 +116,30 @@
 				description:
 					"Perusahaan Integrated Facility Management (IFM) yang menangani engineering, maintenance, cleaning, utilitas, hingga project dan improvement untuk gedung komersial dan fasilitas industri.",
 				email: "servicebangunan@gmail.com",
-				telephone: "+6285800602797",
+				telephone: "+6287798658391",
 				areaServed: { "@type": "Country", name: "Indonesia" },
 				address: [
 					{
 						"@type": "PostalAddress",
-						name: "Office & Workshop",
-						streetAddress: "Jl. H.Gadung 2A No 99, Pondok Ranji, Ciputat",
-						addressLocality: "Tangerang Selatan",
-						postalCode: "15412",
-						addressRegion: "Banten",
+						name: "Jakarta",
+						streetAddress: "Jalan Pahlawan Revolusi, KBD 1 No.16, Duren Sawit",
+						addressLocality: "Jakarta Timur",
+						addressRegion: "DKI Jakarta",
 						addressCountry: "ID",
 					},
 					{
 						"@type": "PostalAddress",
-						name: "Tech Office Hub",
-						streetAddress: "LTC GF 1 Blok C27 no 1, Jl. Hayam Wuruk No 127",
-						addressLocality: "Jakarta Barat",
-						postalCode: "11180",
-						addressRegion: "DKI Jakarta",
+						name: "Solo",
+						streetAddress: "Jalan Padjajaran Timur 2 No.11 A",
+						addressLocality: "Solo",
+						addressRegion: "Jawa Tengah",
 						addressCountry: "ID",
 					},
 				],
 				contactPoint: {
 					"@type": "ContactPoint",
 					contactType: "customer service",
-					telephone: "+6285800602797",
+					telephone: "+6287798658391",
 					email: "servicebangunan@gmail.com",
 					availableLanguage: ["id", "en"],
 				},
@@ -836,15 +834,15 @@
 								<div class="flex items-center gap-2 mb-2">
 									<MapPin size={16} class="text-yellow-400" />
 									<h4 class="font-bold text-white">
-										Office & Workshop
+										Jakarta
 									</h4>
 								</div>
 								<p
 									class="text-blue-200 text-sm leading-relaxed mb-2"
 								>
-									Jl. H.Gadung 2A No 99<br />
-									Pondok Ranji, Ciputat<br />
-									Tangerang Selatan 15412
+									Jalan Pahlawan Revolusi<br />
+									KBD 1 No.16<br />
+									Duren Sawit, Jakarta Timur
 								</p>
 								<p class="text-sm font-semibold text-white">
 									WhatsApp <a
@@ -852,7 +850,7 @@
 										target="_blank"
 										rel="noopener"
 										class="underline decoration-yellow-400/60 underline-offset-2 hover:text-yellow-400 transition-colors"
-										>085800602797</a
+										>087798658391</a
 									>
 								</p>
 							</div>
@@ -860,15 +858,15 @@
 								<div class="flex items-center gap-2 mb-2">
 									<MapPin size={16} class="text-yellow-400" />
 									<h4 class="font-bold text-white">
-										Tech Office Hub
+										Solo
 									</h4>
 								</div>
 								<p
 									class="text-blue-200 text-sm leading-relaxed mb-2"
 								>
-									LTC GF 1 Blok C27 no 1<br />
-									Jl. Hayam Wuruk No 127<br />
-									Jakarta Barat 11180
+									Jalan Padjajaran Timur 2<br />
+									No.11 A<br />
+									Solo, Jawa Tengah
 								</p>
 							</div>
 						</div>

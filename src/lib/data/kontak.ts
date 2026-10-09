@@ -1,6 +1,6 @@
 /** Satu sumber kebenaran untuk kontak WhatsApp, dipakai navbar, beranda, footer, dan tombol melayang. */
-export const WA_NUMBER = '6285800602797';
-export const WA_DISPLAY = '+62 858 0060 2797';
+export const WA_NUMBER = '6287798658391';
+export const WA_DISPLAY = '+62 877 9865 8391';
 
 const SITE = 'https://www.servicebangunan.id';
 
