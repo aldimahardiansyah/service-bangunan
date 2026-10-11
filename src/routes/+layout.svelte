@@ -39,6 +39,14 @@
 				lokasi: a.closest("[data-lokasi]")?.getAttribute("data-lokasi") ?? "lainnya",
 				link_url: href,
 			});
+
+			// Klik WhatsApp adalah satu-satunya aksi prospek di situs ini,
+			// jadi itu yang dilaporkan ke Google Ads sebagai konversi.
+			if (name === "klik_whatsapp") {
+				gtag("event", "conversion", {
+					send_to: "AW-18502578386/AxlzCLannJkdENLh2_ZE",
+				});
+			}
 		};
 		document.addEventListener("click", onClick);
 		return () => document.removeEventListener("click", onClick);
