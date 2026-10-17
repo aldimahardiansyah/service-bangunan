@@ -97,10 +97,12 @@
 	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
 	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
-	import { artikelList, formatTanggal } from "$lib/data/artikel";
+	import { formatTanggal, sampul } from "$lib/data/artikel";
+
+	let { data } = $props();
 
 	const SITE = "https://www.servicebangunan.id";
-	const artikelTerbaru = artikelList.slice(0, 3);
+	let artikelTerbaru = $derived(data.artikelTerbaru);
 
 	const skemaPerusahaan = {
 		"@context": "https://schema.org",
@@ -710,7 +712,7 @@
 						class="block aspect-[16/9] overflow-hidden"
 					>
 						<img
-							src={artikel.cover}
+							src={sampul(artikel.cover, 800)}
 							alt={artikel.coverAlt}
 							class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 							loading="lazy"

@@ -6,7 +6,7 @@
 	import { afterNavigate } from "$app/navigation";
 	import { onMount, tick } from "svelte";
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	// afterNavigate juga berjalan pada kunjungan pertama, jadi semua tampilan
 	// halaman tercatat: pemuatan awal maupun perpindahan tanpa reload.
@@ -63,7 +63,7 @@
 	<main class="flex-grow">
 		{@render children()}
 	</main>
-	<Footer />
+	<Footer artikel={data.artikelFooter} />
 </div>
 
 <TombolWhatsApp />

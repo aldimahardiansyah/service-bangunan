@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-svelte";
-	import {
-		artikelList,
-		kategoriList,
-		formatTanggal,
-	} from "$lib/data/artikel";
+	import { formatTanggal, sampul } from "$lib/data/artikel";
+
+	let { data } = $props();
+	let daftar = $derived(data.daftar);
+	let kategoriList = $derived([
+		"Semua",
+		...[...new Set(daftar.map((a) => a.category))].sort(),
+	]);
 
 	const PER_PAGE = 9;
 
@@ -13,8 +16,8 @@
 
 	let filtered = $derived(
 		activeCategory === "Semua"
-			? artikelList
-			: artikelList.filter((a) => a.category === activeCategory),
+			? daftar
+			: daftar.filter((a) => a.category === activeCategory),
 	);
 	let totalPages = $derived(Math.max(1, Math.ceil(filtered.length / PER_PAGE)));
 	let visible = $derived(filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE));
@@ -89,7 +92,7 @@
 						class="block aspect-[16/9] overflow-hidden"
 					>
 						<img
-							src={artikel.cover}
+							src={sampul(artikel.cover, 800)}
 							alt={artikel.coverAlt}
 							class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 							loading="lazy"

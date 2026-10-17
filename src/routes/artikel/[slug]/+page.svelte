@@ -6,7 +6,7 @@
 		Clock,
 		LayoutGrid,
 	} from "lucide-svelte";
-	import { formatTanggal } from "$lib/data/artikel";
+	import { formatTanggal, sampul } from "$lib/data/artikel";
 
 	let { data } = $props();
 
@@ -26,7 +26,7 @@
 				"@type": "Article",
 				headline: artikel.title,
 				description: artikel.description,
-				image: `${SITE}${artikel.cover}`,
+				image: artikel.cover,
 				datePublished: artikel.date,
 				dateModified: artikel.date,
 				articleSection: artikel.category,
@@ -60,7 +60,7 @@
 	<meta property="og:title" content={artikel.seoTitle} />
 	<meta property="og:description" content={artikel.description} />
 	<meta property="og:url" content={url} />
-	<meta property="og:image" content={`${SITE}${artikel.cover}`} />
+	<meta property="og:image" content={artikel.cover} />
 	<meta property="og:locale" content="id_ID" />
 	<meta property="og:site_name" content="Service Bangunan ID" />
 	<meta property="article:published_time" content={artikel.date} />
@@ -69,7 +69,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={artikel.seoTitle} />
 	<meta name="twitter:description" content={artikel.description} />
-	<meta name="twitter:image" content={`${SITE}${artikel.cover}`} />
+	<meta name="twitter:image" content={artikel.cover} />
 
 	{@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
 </svelte:head>
@@ -119,7 +119,7 @@
 	<div class="container max-w-3xl">
 		<figure class="mb-12">
 			<img
-				src={artikel.cover}
+				src={sampul(artikel.cover, 1200)}
 				alt={artikel.coverAlt}
 				class="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
 				fetchpriority="high"
