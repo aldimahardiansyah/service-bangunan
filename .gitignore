@@ -24,3 +24,6 @@ vite.config.ts.timestamp-*
 
 # Folder kerja sumber artikel (docx + foto asli), tidak ikut ke repo
 assets-artikel/
+
+# Hasil build Sanity Studio
+studio/dist
