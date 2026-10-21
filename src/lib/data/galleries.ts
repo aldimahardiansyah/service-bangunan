@@ -247,7 +247,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 31,
@@ -255,7 +255,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 32,
@@ -263,7 +263,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 33,
@@ -271,7 +271,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 34,
@@ -279,7 +279,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 35,
@@ -287,7 +287,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 36,
@@ -295,7 +295,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 37,
@@ -303,7 +303,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 38,
@@ -311,7 +311,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 39,
@@ -319,7 +319,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 40,
@@ -327,7 +327,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 41,
@@ -335,7 +335,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 42,
@@ -343,7 +343,7 @@ export const galleries: Galeri[] = [
 		title: "Pengecatan Gedung",
 		category: "Pengecatan Gedung",
 		company: "PGS Solo",
-		location: "Solo"
+		location: "Surakarta"
 	},
 	{
 		id: 43,

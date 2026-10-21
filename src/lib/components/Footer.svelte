@@ -183,10 +183,10 @@
 				<li class="flex items-start gap-3">
 					<MapPin size={18} class="text-yellow-400 shrink-0 mt-0.5" />
 					<div class="text-blue-200">
-						<strong>Solo:</strong><br />
+						<strong>Surakarta:</strong><br />
 						Jalan Padjajaran Timur 2<br />
 						No.11 A<br />
-						Solo, Jawa Tengah
+						Surakarta, Jawa Tengah
 					</div>
 				</li>
 				<li class="flex items-center gap-3">

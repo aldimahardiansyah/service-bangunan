@@ -162,9 +162,9 @@
 					},
 					{
 						"@type": "PostalAddress",
-						name: "Solo",
+						name: "Surakarta",
 						streetAddress: "Jalan Padjajaran Timur 2 No.11 A",
-						addressLocality: "Solo",
+						addressLocality: "Surakarta",
 						addressRegion: "Jawa Tengah",
 						addressCountry: "ID",
 					},
@@ -961,7 +961,7 @@
 								<div class="flex items-center gap-2 mb-2">
 									<MapPin size={16} class="text-yellow-400" />
 									<h4 class="font-bold text-white">
-										Solo
+										Surakarta
 									</h4>
 								</div>
 								<p
@@ -969,7 +969,7 @@
 								>
 									Jalan Padjajaran Timur 2<br />
 									No.11 A<br />
-									Solo, Jawa Tengah
+									Surakarta, Jawa Tengah
 								</p>
 							</div>
 						</div>
