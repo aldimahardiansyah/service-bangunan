@@ -27,3 +27,6 @@ assets-artikel/
 
 # Hasil build Sanity Studio
 studio/dist
+
+# Berkas logo klien mentah
+logo-sbi/
