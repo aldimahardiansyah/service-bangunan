@@ -82,20 +82,20 @@
 						loading="lazy"
 					/>
 					<div
-						class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+						class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
 					>
 						<h3
-							class="text-xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+							class="text-xl font-bold text-white mb-1 transform translate-y-0 [@media(hover:hover)]:translate-y-4 [@media(hover:hover)]:group-hover:translate-y-0 transition-transform duration-300"
 						>
 							{item.company}
 						</h3>
 						<p
-							class="text-yellow-400 font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
+							class="text-yellow-400 font-medium text-sm transform translate-y-0 [@media(hover:hover)]:translate-y-4 [@media(hover:hover)]:group-hover:translate-y-0 transition-transform duration-300 delay-75"
 						>
 							{item.category}
 						</p>
 						<p
-							class="text-blue-100 text-sm mt-1 flex items-center gap-1.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100"
+							class="text-blue-100 text-sm mt-1 flex items-center gap-1.5 transform translate-y-0 [@media(hover:hover)]:translate-y-4 [@media(hover:hover)]:group-hover:translate-y-0 transition-transform duration-300 delay-100"
 						>
 							<MapPin size={14} class="shrink-0" />
 							{item.location}
