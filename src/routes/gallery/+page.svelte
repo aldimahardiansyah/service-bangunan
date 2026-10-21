@@ -1,24 +1,11 @@
 <script lang="ts">
-	import { ArrowLeft, ZoomIn, Briefcase, ChevronRight } from "lucide-svelte";
+	import { ArrowLeft, MapPin } from "lucide-svelte";
 
 	let activeCategory = $state("Semua");
 
-	import { galleries } from "$lib/data/galleries";
+	import { galleries, kategoriGaleri } from "$lib/data/galleries";
 
-	const categories = [
-		"Semua",
-		"Plumbing PPR",
-		"Purifikasi Trafo",
-		"Pipa Hydrant",
-		"Diesel Maintenance",
-		"Pengecatan Gedung",
-		"Architectural Works",
-		"Construction & MEP",
-		"Project Takeover",
-		"Lighting & Plafon",
-		"Electrical Panel",
-		"TPS dan Limbah Sampah",
-	];
+	const categories = kategoriGaleri;
 
 	let filteredGalleries = $derived(
 		activeCategory === "Semua"
@@ -100,12 +87,18 @@
 						<h3
 							class="text-xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
 						>
-							{item.title}
+							{item.company}
 						</h3>
 						<p
 							class="text-yellow-400 font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
 						>
 							{item.category}
+						</p>
+						<p
+							class="text-blue-100 text-sm mt-1 flex items-center gap-1.5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100"
+						>
+							<MapPin size={14} class="shrink-0" />
+							{item.location}
 						</p>
 					</div>
 				</div>

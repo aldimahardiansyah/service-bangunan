@@ -751,12 +751,12 @@
 						<h3
 							class="text-xl font-bold text-white mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
 						>
-							{item.title}
+							{item.company}
 						</h3>
 						<p
 							class="text-yellow-400 font-medium text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
 						>
-							{item.category}
+							{item.category} · {item.location}
 						</p>
 					</div>
 				</div>
