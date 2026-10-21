@@ -5,6 +5,9 @@
 		TrendingUp,
 		Sparkles,
 		Wrench,
+		ShieldCheck,
+		BadgeCheck,
+		PackageCheck,
 		Zap,
 		Flame,
 		Droplets,
@@ -18,6 +21,24 @@
 		Mail,
 		MapPin,
 	} from "lucide-svelte";
+
+	const benefits = [
+		{
+			title: "Garansi Pengerjaan",
+			icon: ShieldCheck,
+			desc: "Jaminan perbaikan gratis jika terjadi kendala pascaproyek.",
+		},
+		{
+			title: "Tim Ahli Bersertifikasi",
+			icon: BadgeCheck,
+			desc: "Ditangani langsung oleh tenaga profesional kompeten.",
+		},
+		{
+			title: "Material Transparan & Jujur",
+			icon: PackageCheck,
+			desc: "100% sesuai spesifikasi, tanpa pengurangan kualitas.",
+		},
+	];
 
 	const coreServices = [
 		{
@@ -598,6 +619,47 @@
 							{plan.description}
 						</p>
 					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- Our Benefit -->
+<section id="keunggulan" class="py-20 md:py-28 bg-slate-50">
+	<div class="container">
+		<div class="text-center max-w-2xl mx-auto mb-16">
+			<div
+				class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold text-sm mb-6"
+			>
+				<span class="w-2 h-2 rounded-full bg-yellow-500"></span> Kenapa Kami
+			</div>
+			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
+				Our Benefit
+			</h2>
+			<p class="text-slate-600 text-lg">
+				Tiga jaminan yang kami pegang pada setiap pekerjaan, dari survei
+				awal sampai proyek selesai.
+			</p>
+		</div>
+
+		<div class="grid md:grid-cols-3 gap-8">
+			{#each benefits as benefit}
+				{@const Icon = benefit.icon}
+				<div
+					class="bg-white rounded-3xl p-8 border border-slate-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+				>
+					<div
+						class="w-16 h-16 rounded-2xl bg-yellow-400 flex items-center justify-center text-slate-900 mb-6"
+					>
+						<Icon size={32} strokeWidth={1.75} />
+					</div>
+					<h3 class="text-xl font-bold text-slate-800 mb-3">
+						{benefit.title}
+					</h3>
+					<p class="text-slate-600 leading-relaxed">
+						{benefit.desc}
+					</p>
 				</div>
 			{/each}
 		</div>
