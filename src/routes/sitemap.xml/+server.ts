@@ -2,7 +2,9 @@ import { ambilRingkas } from '$lib/server/sanity';
 
 export async function GET({ url, setHeaders }) {
 	const artikel = await ambilRingkas();
-	const pages = ['', '/#tentang', '/#layanan', '/#cara-kerja', '/#portofolio', '/#kontak', '/gallery', '/artikel'];
+	// Hanya halaman sungguhan. Tautan berpenanda '#' adalah bagian dari beranda,
+	// dan Google menganggapnya duplikat dari '/'.
+	const pages = ['', '/gallery', '/artikel'];
 
 	const statis = pages.map(
 		(page) => `  <url>
