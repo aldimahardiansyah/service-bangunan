@@ -150,7 +150,15 @@
 					"Perusahaan Integrated Facility Management (IFM) yang menangani engineering, maintenance, cleaning, utilitas, hingga project dan improvement untuk gedung komersial dan fasilitas industri.",
 				email: "servicebangunan@gmail.com",
 				telephone: "+6287798658391",
-				areaServed: { "@type": "Country", name: "Indonesia" },
+				areaServed: [
+					{ "@type": "Country", name: "Indonesia" },
+					{ "@type": "City", name: "Jakarta" },
+					{ "@type": "City", name: "Bogor" },
+					{ "@type": "City", name: "Depok" },
+					{ "@type": "City", name: "Tangerang" },
+					{ "@type": "City", name: "Bekasi" },
+					{ "@type": "City", name: "Surakarta" },
+				],
 				address: [
 					{
 						"@type": "PostalAddress",
@@ -579,6 +587,12 @@
 			<p class="text-slate-600 text-lg">
 				Solusi end-to-end terintegrasi untuk menjaga fungsi dan kualitas
 				fasilitas bangunan Anda tetap optimal.
+			</p>
+			<p
+				class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-semibold"
+			>
+				<MapPin size={16} class="text-blue-600 shrink-0" />
+				Melayani Jabodetabek dan seluruh Indonesia
 			</p>
 		</div>
 
