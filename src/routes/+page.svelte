@@ -292,6 +292,12 @@
 			>
 				PT PURI DEWI AGUNG
 			</div>
+			<div
+				class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 border border-yellow-400/30 backdrop-blur-sm rounded-full text-yellow-400 font-semibold text-sm mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700"
+			>
+				<MapPin size={15} class="shrink-0" />
+				Jabodetabek & Seluruh Indonesia
+			</div>
 			<h1
 				class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-150"
 			>
