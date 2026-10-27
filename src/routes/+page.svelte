@@ -28,16 +28,6 @@
 		{ id: "QEEdwJyAjOk", judul: "Pentingnya Perawatan Electrical Panel Gedung" },
 	];
 
-	const clients = [
-		{ nama: "Telkom Indonesia", file: "telkom-indonesia" },
-		{ nama: "Astra", file: "astra" },
-		{ nama: "Kementerian UMKM", file: "kementerian-umkm" },
-		{ nama: "Ravindo Putra Mandiri", file: "ravindo" },
-		{ nama: "Paladian Park", file: "paladian-park" },
-		{ nama: "Playdo Indonesia", file: "playdo-indonesia" },
-		{ nama: "Wood Stairs", file: "wood-stairs" },
-	];
-
 	const benefits = [
 		{
 			title: "Garansi Pengerjaan",
@@ -94,6 +84,7 @@
 	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
 	import VideoShorts from "$lib/components/VideoShorts.svelte";
+	import LogoKlien from "$lib/components/LogoKlien.svelte";
 	import { formatTanggal, sampul } from "$lib/data/artikel";
 
 	let { data } = $props();
@@ -324,29 +315,7 @@
 <!-- Klien -->
 <section id="klien" class="py-16 md:py-20 bg-slate-50 border-b border-slate-200">
 	<div class="container">
-		<p
-			class="text-center text-sm font-semibold uppercase tracking-wider text-slate-500 mb-10"
-		>
-			Dipercaya oleh
-		</p>
-		<ul
-			class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6 items-stretch"
-		>
-			{#each clients as client}
-				<li
-					class="bg-white rounded-2xl border border-slate-200 h-28 flex items-center justify-center px-4 py-3 transition-shadow hover:shadow-md"
-				>
-					<img
-						src="/images/klien/{client.file}.webp"
-						alt="Logo {client.nama}"
-						title={client.nama}
-						class="max-h-full w-auto object-contain"
-						loading="lazy"
-						decoding="async"
-					/>
-				</li>
-			{/each}
-		</ul>
+		<LogoKlien />
 	</div>
 </section>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowLeft, ArrowRight, CheckCircle2, MapPin } from "lucide-svelte";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
+	import LogoKlien from "$lib/components/LogoKlien.svelte";
 	import { layananList } from "$lib/data/layanan";
 	import { galleries } from "$lib/data/galleries";
 	import { waLink } from "$lib/data/kontak";
@@ -97,6 +98,13 @@
 				</li>
 			{/each}
 		</ul>
+	</div>
+</section>
+
+<!-- Logo klien -->
+<section class="py-12 md:py-16 bg-white border-b border-slate-200">
+	<div class="container">
+		<LogoKlien judul="Sudah dipercaya mengerjakan proyek di" />
 	</div>
 </section>
 
