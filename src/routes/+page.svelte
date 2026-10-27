@@ -172,7 +172,7 @@
 	/>
 	<meta
 		name="keywords"
-		content="konstruksi, renovasi, perbaikan rumah, desain interior, jasa bangun rumah, service bangunan"
+		content="jasa pasang penangkal petir, kontraktor ipal, jasa service genset, jasa pembersihan kaca gedung, jasa perawatan taman, jasa pemeliharaan gedung, facility management"
 	/>
 	<link rel="canonical" href="https://www.servicebangunan.id/" />
 
@@ -319,7 +319,7 @@
 	</div>
 </section>
 
-<!-- Company Overview Section -->
+<!-- Tentang Perusahaan -->
 <section id="tentang" class="py-20 md:py-28 bg-slate-50">
 	<div class="container">
 		<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -329,7 +329,7 @@
 				></div>
 				<img
 					src="/images/overview.webp"
-					alt="Company Overview"
+					alt="Tim Service Bangunan ID di lokasi proyek"
 					class="rounded-3xl shadow-2xl object-cover h-[500px] w-full"
 					width="1000"
 					height="1000"
@@ -432,7 +432,7 @@
 				<span class="w-2 h-2 rounded-full bg-blue-600"></span> Tujuan Kami
 			</div>
 			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
-				Vision and Mission
+				Visi dan Misi
 			</h2>
 		</div>
 
@@ -520,14 +520,15 @@
 			<div
 				class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold text-sm mb-6"
 			>
-				<span class="w-2 h-2 rounded-full bg-yellow-500"></span> IFM Scope
+				<span class="w-2 h-2 rounded-full bg-yellow-500"></span> Lingkup Layanan
 			</div>
 			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
-				Our Services
+				Layanan Kami
 			</h2>
 			<p class="text-slate-600 text-lg">
-				Solusi end-to-end terintegrasi untuk menjaga fungsi dan kualitas
-				fasilitas bangunan Anda tetap optimal.
+				Dari penangkal petir, genset, dan panel listrik sampai IPAL, STP,
+				pembersihan kaca gedung, dan perawatan taman. Semua ditangani satu
+				tim agar fasilitas Anda tetap berfungsi optimal.
 			</p>
 			<p
 				class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-700 text-sm font-semibold"
@@ -590,7 +591,7 @@
 				<span class="w-2 h-2 rounded-full bg-blue-600"></span> Tahapan Sistematis
 			</div>
 			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
-				Our Working Plan
+				Alur Kerja Kami
 			</h2>
 			<p class="text-slate-600 text-lg">
 				Metode kerja profesional yang terstruktur untuk memastikan hasil
@@ -633,7 +634,7 @@
 	</div>
 </section>
 
-<!-- Our Benefit -->
+<!-- Kenapa Memilih Kami -->
 <section id="keunggulan" class="py-20 md:py-28 bg-slate-50">
 	<div class="container">
 		<div class="text-center max-w-2xl mx-auto mb-16">
@@ -643,7 +644,7 @@
 				<span class="w-2 h-2 rounded-full bg-yellow-500"></span> Kenapa Kami
 			</div>
 			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
-				Our Benefit
+				Kenapa Memilih Kami
 			</h2>
 			<p class="text-slate-600 text-lg">
 				Tiga jaminan yang kami pegang pada setiap pekerjaan, dari survei
@@ -860,7 +861,7 @@
 						class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500 text-blue-50 font-semibold text-sm mb-6 border border-blue-400"
 					>
 						<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-						Get in Touch
+						Hubungi Kami
 					</div>
 					<h2
 						class="text-3xl md:text-5xl font-bold mb-6 leading-tight"

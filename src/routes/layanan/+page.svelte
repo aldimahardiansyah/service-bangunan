@@ -39,11 +39,11 @@
 
 <svelte:head>
 	<title
-		>Layanan Facility Management, MEP, Penangkal Petir & IPAL | Service Bangunan ID</title
+		>Jasa Penangkal Petir, IPAL, Genset & Perawatan Gedung | Service Bangunan ID</title
 	>
 	<meta
 		name="description"
-		content="Lingkup pekerjaan Service Bangunan ID: MEP dan electrical, penangkal petir, fire protection, IPAL dan STP, cleaning kaca gedung, landscaping, hingga renovasi."
+		content="Jasa pasang penangkal petir, kontraktor IPAL dan STP, service genset dan panel listrik, pembersihan kaca gedung, perawatan taman, dan pemeliharaan gedung. Jabodetabek dan seluruh Indonesia."
 	/>
 	<link rel="canonical" href="https://www.servicebangunan.id/layanan" />
 	{@html `<script type="application/ld+json">${JSON.stringify(skema)}</script>`}
@@ -126,9 +126,9 @@
 					</div>
 					<div>
 						<h2
-							class="text-2xl md:text-3xl font-bold text-slate-900 leading-snug"
+							class="text-xl md:text-3xl font-bold text-slate-900 leading-snug"
 						>
-							{l.nama}
+							{l.judul ?? l.nama}
 						</h2>
 						<p class="text-slate-500 mt-1">{l.ringkas}</p>
 					</div>

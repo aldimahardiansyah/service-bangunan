@@ -6,6 +6,8 @@ import {
 export type Layanan = {
 	slug: string;
 	nama: string;
+	/** Judul panjang untuk H2 di halaman layanan, memuat istilah yang dicari orang. */
+	judul?: string;
 	// Ikon lucide memakai tipe komponen lama, jadi bentuknya diambil dari salah satunya.
 	icon: typeof Zap;
 	/** Kalimat pendek untuk kartu di beranda. */
@@ -21,8 +23,9 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'mep-electrical',
 		nama: 'MEP & Electrical',
+		judul: 'MEP & Electrical — Jasa Service Genset, Panel Listrik, dan Trafo',
 		icon: Zap,
-		ringkas: 'Panel listrik, ATS, genset, trafo, HVAC, plumbing, dan utilitas bangunan.',
+		ringkas: 'Service genset, panel listrik, ATS, purifikasi trafo, HVAC, dan plumbing.',
 		uraian: [
 			'Sistem mekanikal, elektrikal, dan plumbing adalah tulang punggung operasional gedung. Satu gangguan kecil pada panel listrik atau sistem tata udara bisa menghentikan aktivitas seluruh lantai.',
 			'Kami menangani pemeliharaan dan perbaikan sistem MEP berdasarkan kondisi aktual lapangan, mulai dari inspeksi rutin sampai penggantian komponen.'
@@ -30,8 +33,8 @@ export const layananList: Layanan[] = [
 		lingkup: [
 			'Maintenance panel listrik LVMDP, SDP, dan control panel',
 			'Pemasangan dan perawatan ATS serta sistem daya cadangan',
-			'Service, overhaul, dan maintenance genset',
-			'Purifikasi dan maintenance transformator',
+			'Service genset, overhaul, dan maintenance genset',
+			'Purifikasi trafo dan maintenance transformator',
 			'HVAC: chiller, AHU, FCU, dan sistem tata udara',
 			'Plumbing dan sistem distribusi air bangunan'
 		],
@@ -40,8 +43,9 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'penangkal-petir',
 		nama: 'Penangkal Petir',
+		judul: 'Penangkal Petir — Jasa Pasang Penangkal Petir Gedung dan Pabrik',
 		icon: CloudLightning,
-		ringkas: 'Instalasi, grounding, pengujian, dan perawatan sistem proteksi petir.',
+		ringkas: 'Jasa pasang penangkal petir, grounding, pengujian, dan perawatan berkala.',
 		uraian: [
 			'Indonesia termasuk wilayah dengan sambaran petir tertinggi di dunia. Gedung bertingkat, pabrik, dan menara tanpa proteksi petir yang benar berisiko kehilangan peralatan elektronik dalam satu kejadian.',
 			'Kami memasang dan merawat sistem penangkal petir beserta sistem pembumiannya, termasuk pemeriksaan instalasi lama yang sudah menurun kinerjanya.'
@@ -57,6 +61,7 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'fire-protection',
 		nama: 'Fire Protection',
+		judul: 'Fire Protection — Jasa Instalasi Hydrant, Sprinkler, dan Fire Alarm',
 		icon: Flame,
 		ringkas: 'Hydrant, sprinkler, fire alarm, dan sistem keselamatan bangunan.',
 		uraian: [
@@ -75,14 +80,15 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'ipal-stp',
 		nama: 'IPAL, STP & Water Treatment',
+		judul: 'IPAL & STP — Kontraktor IPAL dan Instalasi Pengolahan Air Limbah',
 		icon: Droplets,
-		ringkas: 'IPAL, STP, wastewater treatment, mesin air bersih, dan pengatur tekanan air.',
+		ringkas: 'Kontraktor IPAL, STP, wastewater treatment, dan mesin air bersih.',
 		uraian: [
 			'Pengolahan air limbah dan penyediaan air bersih adalah dua sistem yang paling sering luput dari perhatian sampai timbul masalah. Padahal keduanya berkaitan langsung dengan kenyamanan penghuni dan kepatuhan lingkungan.',
 			'Kami menangani pembuatan, perawatan, dan optimasi sistem pengolahan air pada gedung komersial maupun kawasan industri.'
 		],
 		lingkup: [
-			'Pembuatan dan perawatan IPAL',
+			'Kontraktor IPAL: pembuatan dan perawatan instalasi pengolahan air limbah',
 			'Instalasi dan maintenance STP',
 			'Wastewater treatment dan water treatment',
 			'Mesin air bersih dan pengatur tekanan air PRV',
@@ -93,8 +99,9 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'building-maintenance',
 		nama: 'Building Maintenance',
+		judul: 'Building Maintenance — Jasa Perawatan dan Pemeliharaan Gedung',
 		icon: Wrench,
-		ringkas: 'Preventive maintenance, corrective maintenance, dan perbaikan fasilitas.',
+		ringkas: 'Jasa pemeliharaan gedung, preventive dan corrective maintenance terjadwal.',
 		uraian: [
 			'Pemeliharaan yang terencana membuat masalah ketahuan sebelum berkembang jadi kerusakan besar. Biayanya jauh lebih terkendali dibanding memperbaiki setelah fasilitas berhenti bekerja.',
 			'Program pemeliharaan kami disusun setelah assessment kondisi aktual, bukan paket seragam untuk semua gedung.'
@@ -110,15 +117,16 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'cleaning-gedung',
 		nama: 'Cleaning & Pembersihan Kaca Gedung',
+		judul: 'Cleaning Gedung — Jasa Pembersihan Kaca Gedung Bertingkat',
 		icon: Sparkles,
-		ringkas: 'Cleaning gedung, pembersihan kaca, high-rise cleaning, dan waste management.',
+		ringkas: 'Cleaning gedung, jasa pembersihan kaca gedung, dan waste management.',
 		uraian: [
 			'Kebersihan adalah hal pertama yang dinilai tamu dan penyewa saat masuk gedung. Untuk bangunan bertingkat, pembersihan kaca bagian luar menuntut peralatan dan prosedur keselamatan tersendiri.',
 			'Kami menyediakan tenaga kebersihan harian maupun pekerjaan berkala sesuai kebutuhan fasilitas.'
 		],
 		lingkup: [
 			'Cleaning service gedung dan perkantoran',
-			'Pembersihan kaca gedung dan high-rise cleaning',
+			'Jasa pembersihan kaca gedung dan high-rise cleaning',
 			'General cleaning berkala',
 			'Pengelolaan sampah dan TPS',
 			'Penyediaan tenaga kebersihan outsourcing'
@@ -128,14 +136,15 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'landscaping-taman',
 		nama: 'Landscaping & Taman',
+		judul: 'Landscaping & Taman — Jasa Pembuatan dan Perawatan Taman Kantor',
 		icon: Trees,
-		ringkas: 'Pembuatan taman, perawatan taman, dan penataan area hijau fasilitas.',
+		ringkas: 'Jasa pembuatan taman, perawatan taman, dan penataan area hijau.',
 		uraian: [
 			'Area hijau yang terawat memengaruhi kesan pertama terhadap sebuah properti, sekaligus menjadi bagian dari kenyamanan penghuni.',
 			'Kami mengerjakan pembuatan taman baru maupun perawatan rutin area hijau pada properti komersial dan kawasan industri.'
 		],
 		lingkup: [
-			'Pembuatan dan penataan taman',
+			'Jasa pembuatan taman dan penataan landscape',
 			'Perawatan taman dan area hijau berkala',
 			'Penataan softscape dan hardscape',
 			'Pemangkasan dan penggantian tanaman',
@@ -145,17 +154,18 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'finishing',
 		nama: 'Pengecatan, Waterproofing & Epoxy',
+		judul: 'Pengecatan, Waterproofing & Epoxy — Jasa Waterproofing Gedung dan Epoxy Lantai',
 		icon: Paintbrush,
-		ringkas: 'Pengecatan gedung, waterproofing, coating, dan epoxy flooring.',
+		ringkas: 'Pengecatan gedung, waterproofing gedung, coating, dan epoxy lantai.',
 		uraian: [
 			'Pekerjaan finishing bukan sekadar soal tampilan. Lapisan pelindung yang tepat memperpanjang umur struktur dan mencegah kebocoran yang mahal diperbaiki.',
 			'Kami mengerjakan pengecatan gedung bertingkat, perbaikan kebocoran, dan pelapisan lantai area industri.'
 		],
 		lingkup: [
 			'Pengecatan gedung dan fasad bangunan',
-			'Waterproofing atap, basement, dan area basah',
+			'Jasa waterproofing atap, basement, dan area basah',
 			'Perbaikan kebocoran dan rembesan',
-			'Epoxy flooring untuk pabrik dan gudang',
+			'Epoxy lantai dan epoxy flooring untuk pabrik dan gudang',
 			'Coating pelindung permukaan'
 		],
 		galeri: 'Pengecatan Gedung'
@@ -163,6 +173,7 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'renovation',
 		nama: 'Renovation & Retrofitting',
+		judul: 'Renovation & Retrofitting — Jasa Renovasi Gedung dan Upgrading Sistem',
 		icon: Hammer,
 		ringkas: 'Renovasi, upgrading, dan modifikasi sistem pada fasilitas existing.',
 		uraian: [
@@ -181,6 +192,7 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'energy-efficiency',
 		nama: 'Energy & Efficiency for Smart Building',
+		judul: 'Energy & Efficiency for Smart Building — Audit dan Efisiensi Energi Gedung',
 		icon: Gauge,
 		ringkas: 'Optimasi peralatan, efisiensi energi, dan penghematan biaya operasional.',
 		uraian: [
@@ -197,6 +209,7 @@ export const layananList: Layanan[] = [
 	{
 		slug: 'procurement',
 		nama: 'Procurement & Supply',
+		judul: 'Procurement & Supply — Pengadaan Spare Part dan Material Teknis',
 		icon: Package,
 		ringkas: 'Pengadaan equipment, material, dan spare parts kebutuhan engineering.',
 		uraian: [
