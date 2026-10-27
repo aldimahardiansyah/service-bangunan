@@ -22,6 +22,12 @@
 		MapPin,
 	} from "lucide-svelte";
 
+	const videoProyek = [
+		{ id: "V_CyP7eIQuk", judul: "Facility Management Gedung, Ada Apa Aja Sih?" },
+		{ id: "f7Q7ZW5FA8Y", judul: "Pentingnya Pipa PPR pada Gedung Modern" },
+		{ id: "QEEdwJyAjOk", judul: "Pentingnya Perawatan Electrical Panel Gedung" },
+	];
+
 	const clients = [
 		{ nama: "Telkom Indonesia", file: "telkom-indonesia" },
 		{ nama: "Astra", file: "astra" },
@@ -128,6 +134,7 @@
 	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
 	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
+	import VideoShorts from "$lib/components/VideoShorts.svelte";
 	import { formatTanggal, sampul } from "$lib/data/artikel";
 
 	let { data } = $props();
@@ -722,6 +729,27 @@
 				</div>
 			{/each}
 		</div>
+	</div>
+</section>
+
+<!-- Video -->
+<section id="video" class="py-20 md:py-28 bg-white">
+	<div class="container">
+		<div class="text-center max-w-2xl mx-auto mb-14">
+			<div
+				class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6"
+			>
+				<span class="w-2 h-2 rounded-full bg-blue-600"></span> Video Singkat
+			</div>
+			<h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
+				Lihat Cara Kami Bekerja
+			</h2>
+			<p class="text-slate-600 text-lg">
+				Cuplikan singkat dari lapangan dan penjelasan teknis dari tim kami.
+			</p>
+		</div>
+
+		<VideoShorts video={videoProyek} />
 	</div>
 </section>
 
