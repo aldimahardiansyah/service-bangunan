@@ -28,7 +28,7 @@
 				src="/images/klien/{client.file}.webp"
 				alt="Logo {client.nama}"
 				title={client.nama}
-				class="max-h-full w-auto object-contain"
+				class="max-h-full max-w-full object-contain"
 				loading="lazy"
 				decoding="async"
 			/>
