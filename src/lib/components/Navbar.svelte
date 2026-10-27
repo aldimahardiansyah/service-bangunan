@@ -37,7 +37,7 @@
 				>Tentang Kami</a
 			>
 			<a
-				href="/#layanan"
+				href="/layanan"
 				class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
 				>Layanan</a
 			>
@@ -99,7 +99,7 @@
 				onclick={toggleMenu}>Tentang Kami</a
 			>
 			<a
-				href="/#layanan"
+				href="/layanan"
 				class="text-base font-medium text-slate-700 py-2 border-b border-slate-50"
 				onclick={toggleMenu}>Layanan</a
 			>

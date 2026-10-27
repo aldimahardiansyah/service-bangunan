@@ -4,7 +4,7 @@ export async function GET({ url, setHeaders }) {
 	const artikel = await ambilRingkas();
 	// Hanya halaman sungguhan. Tautan berpenanda '#' adalah bagian dari beranda,
 	// dan Google menganggapnya duplikat dari '/'.
-	const pages = ['', '/gallery', '/artikel'];
+	const pages = ['', '/layanan', '/gallery', '/artikel'];
 
 	const statis = pages.map(
 		(page) => `  <url>

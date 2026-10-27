@@ -56,48 +56,6 @@
 		},
 	];
 
-	const coreServices = [
-		{
-			title: "MEP & Electrical",
-			icon: Zap,
-			desc: "Electrical, mechanical, HVAC, plumbing dan sistem utilitas bangunan.",
-		},
-		{
-			title: "Fire Protection",
-			icon: Flame,
-			desc: "Hydrant, sprinkler, fire alarm dan sistem keselamatan bangunan.",
-		},
-		{
-			title: "STP & Water Treatment",
-			icon: Droplets,
-			desc: "STP, wastewater treatment, water treatment dan optimasi sistem pengolahan air.",
-		},
-		{
-			title: "Building Maintenance",
-			icon: Wrench,
-			desc: "Preventive maintenance, corrective maintenance dan perbaikan fasilitas bangunan.",
-		},
-		{
-			title: "Renovation & Retrofitting",
-			icon: Hammer,
-			desc: "Renovasi, upgrading dan modifikasi sistem untuk meningkatkan fungsi fasilitas existing.",
-		},
-		{
-			title: "Energy & Efficiency for Smart Building",
-			icon: Gauge,
-			desc: "Optimasi peralatan, efisiensi energi dan solusi penghematan operasional.",
-		},
-		{
-			title: "Procurement & Supply",
-			icon: Package,
-			desc: "Pengadaan equipment, material dan spare parts untuk kebutuhan engineering.",
-		},
-		{
-			title: "Facility Services",
-			icon: Sparkles,
-			desc: "Cleaning, landscaping, waste management dan layanan pendukung operasional bangunan.",
-		},
-	];
 
 	const workingPlan = [
 		{
@@ -131,6 +89,7 @@
 	];
 
 	import { galleries } from "$lib/data/galleries";
+	import { layananList } from "$lib/data/layanan";
 	import { waLink, WA_SAPAAN_UMUM, WA_DISPLAY } from "$lib/data/kontak";
 	import { page } from "$app/state";
 	import IkonWhatsApp from "$lib/components/IkonWhatsApp.svelte";
@@ -607,12 +566,21 @@
 				<MapPin size={16} class="text-blue-600 shrink-0" />
 				Melayani Jabodetabek dan seluruh Indonesia
 			</p>
+			<div class="mt-8">
+				<a
+					href="/layanan"
+					class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-bold transition-colors"
+				>
+					Lihat Semua Layanan <ArrowRight size={18} />
+				</a>
+			</div>
 		</div>
 
 		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-			{#each coreServices as service}
+			{#each layananList as service (service.slug)}
 				{@const Icon = service.icon}
-				<div
+				<a
+					href="/layanan#{service.slug}"
 					class="group bg-blue-700 rounded-[2rem] border-4 border-white shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
 				>
 					<div
@@ -624,15 +592,20 @@
 						<h3
 							class="text-lg font-bold text-white mb-4 text-center leading-snug"
 						>
-							{service.title}
+							{service.nama}
 						</h3>
 						<p
 							class="text-blue-100 text-sm leading-relaxed text-center"
 						>
-							{service.desc}
+							{service.ringkas}
 						</p>
+						<span
+							class="mt-5 text-yellow-400 text-sm font-semibold text-center opacity-0 group-hover:opacity-100 transition-opacity"
+						>
+							Lihat detail
+						</span>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
