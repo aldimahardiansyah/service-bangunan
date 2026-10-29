@@ -151,26 +151,6 @@ export const layananList: Layanan[] = [
         src: "/images/layanan/penangkal-petir-1.webp",
         alt: "Finial penangkal petir terpasang di puncak menara",
       },
-      {
-        src: "/images/layanan/penangkal-petir-2.webp",
-        alt: "Pengujian tahanan pembumian pada bak kontrol grounding",
-      },
-      {
-        src: "/images/layanan/penangkal-petir-3.webp",
-        alt: "Pemeriksaan sambungan grounding penangkal petir",
-      },
-      {
-        src: "/images/layanan/penangkal-petir-4.webp",
-        alt: "Pengelasan cadweld pada sistem pembumian",
-      },
-      {
-        src: "/images/layanan/penangkal-petir-5.webp",
-        alt: "Perawatan berkala bak kontrol grounding",
-      },
-      {
-        src: "/images/layanan/penangkal-petir-6.webp",
-        alt: "Teknisi memeriksa instalasi grounding penangkal petir",
-      },
     ],
   },
   {
@@ -225,6 +205,26 @@ export const layananList: Layanan[] = [
         src: "/images/layanan/fire-protection-8.webp",
         alt: "Bend pipa utama hydrant terpasang",
       },
+      {
+        src: "/images/layanan/fire-protection-9.webp",
+        alt: "Pemeriksaan siamese connection hydrant di area gedung",
+      },
+      {
+        src: "/images/layanan/fire-protection-10.webp",
+        alt: "Pelepasan kopling siamese connection untuk penggantian",
+      },
+      {
+        src: "/images/layanan/fire-protection-11.webp",
+        alt: "Pemanasan sambungan saat perbaikan siamese connection",
+      },
+      {
+        src: "/images/layanan/fire-protection-12.webp",
+        alt: "Pembongkaran siamese connection lama pada pilar hydrant",
+      },
+      {
+        src: "/images/layanan/fire-protection-13.webp",
+        alt: "Pemasangan kembali siamese connection hydrant gedung",
+      },
     ],
     galeri: "Pipa Hydrant",
   },
@@ -246,10 +246,6 @@ export const layananList: Layanan[] = [
       "Pengelolaan sampah, TPS, dan limbah B3",
     ],
     foto: [
-      {
-        src: "/images/layanan/ipal-stp-1.webp",
-        alt: "Pekerjaan perbaikan di dalam tangki pengolahan air limbah",
-      },
       {
         src: "/images/layanan/ipal-stp-2.webp",
         alt: "Penataan tempat penyimpanan limbah B3",
@@ -322,6 +318,10 @@ export const layananList: Layanan[] = [
       {
         src: "/images/layanan/plumbing-11.webp",
         alt: "Gate valve stainless untuk sistem distribusi air",
+      },
+      {
+        src: "/images/layanan/plumbing-12.webp",
+        alt: "Perbaikan jalur pipa utama di area basement gedung",
       },
     ],
     galeri: "Mesin Air Bersih PRV",

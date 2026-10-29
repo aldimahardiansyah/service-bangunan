@@ -190,12 +190,16 @@
 						</ul>
 
 						{#if l.foto.length}
-							<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+							<div class="grid gap-2 {l.foto.length === 1
+									? 'grid-cols-1'
+									: 'grid-cols-2 sm:grid-cols-3'}">
 								{#each l.foto as f (f.src)}
 									<img
 										src={f.src}
 										alt={f.alt}
-										class="w-full aspect-square object-cover rounded-lg bg-slate-100"
+										class="w-full rounded-lg bg-slate-100 {l.foto.length === 1
+											? 'max-h-80 object-contain'
+											: 'aspect-square object-cover'}"
 										loading="lazy"
 										decoding="async"
 									/>
