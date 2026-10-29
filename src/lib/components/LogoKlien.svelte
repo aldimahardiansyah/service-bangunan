@@ -7,6 +7,7 @@
 		{ nama: "Paladian Park", file: "paladian-park" },
 		{ nama: "Playdo Indonesia", file: "playdo-indonesia" },
 		{ nama: "Wood Stairs", file: "wood-stairs" },
+		{ nama: "Sushi Toku", file: "sushi-toku" },
 	];
 
 	let { judul = "Dipercaya oleh" }: { judul?: string } = $props();
@@ -18,7 +19,7 @@
 	{judul}
 </p>
 <ul
-	class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6 items-stretch"
+	class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 items-stretch"
 >
 	{#each clients as client (client.file)}
 		<li
