@@ -27,9 +27,12 @@
 			position: i + 1,
 			item: {
 				"@type": "Service",
-				name: l.nama,
+				name: l.judul ?? l.nama,
 				description: l.ringkas,
 				url: `${SITE}/layanan#${l.slug}`,
+				...(l.foto.length
+					? { image: l.foto.map((f) => `${SITE}${f.src}`) }
+					: {}),
 				provider: { "@id": `${SITE}/#organization` },
 				areaServed: { "@type": "Country", name: "Indonesia" },
 			},
@@ -39,13 +42,30 @@
 
 <svelte:head>
 	<title
-		>Jasa Penangkal Petir, IPAL, Genset & Perawatan Gedung | Service Bangunan ID</title
+		>Jasa Penangkal Petir, IPAL, Genset & Maintenance Gedung | Service Bangunan ID</title
 	>
 	<meta
 		name="description"
-		content="Jasa pasang penangkal petir, kontraktor IPAL dan STP, service genset dan panel listrik, pembersihan kaca gedung, perawatan taman, dan pemeliharaan gedung. Jabodetabek dan seluruh Indonesia."
+		content="Jasa pasang penangkal petir, kontraktor IPAL dan STP, service genset, purifikasi trafo, maintenance HVAC, plumbing PPR, pembersihan kaca gedung, dan maintenance gedung. Jabodetabek dan seluruh Indonesia."
 	/>
 	<link rel="canonical" href="https://www.servicebangunan.id/layanan" />
+	<meta property="og:type" content="website" />
+	<meta
+		property="og:title"
+		content="Jasa Penangkal Petir, IPAL, Genset & Maintenance Gedung"
+	/>
+	<meta
+		property="og:description"
+		content="Lingkup pekerjaan Service Bangunan ID untuk gedung komersial, perkantoran, apartemen, dan kawasan industri di Jabodetabek dan seluruh Indonesia."
+	/>
+	<meta property="og:url" content="https://www.servicebangunan.id/layanan" />
+	<meta
+		property="og:image"
+		content="https://www.servicebangunan.id/images/layanan/penangkal-petir-1.webp"
+	/>
+	<meta property="og:locale" content="id_ID" />
+	<meta property="og:site_name" content="Service Bangunan ID" />
+	<meta name="twitter:card" content="summary_large_image" />
 	{@html `<script type="application/ld+json">${JSON.stringify(skema)}</script>`}
 </svelte:head>
 
@@ -169,7 +189,19 @@
 							{/each}
 						</ul>
 
-						{#if foto.length}
+						{#if l.foto.length}
+							<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+								{#each l.foto as f (f.src)}
+									<img
+										src={f.src}
+										alt={f.alt}
+										class="w-full aspect-square object-cover rounded-lg bg-slate-100"
+										loading="lazy"
+										decoding="async"
+									/>
+								{/each}
+							</div>
+						{:else if foto.length}
 							<div class="grid grid-cols-3 gap-2">
 								{#each foto as f (f.id)}
 									<img
