@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { ArrowLeft, ChevronDown, MapPin } from "lucide-svelte";
+	import { ArrowLeft, MapPin } from "lucide-svelte";
+	import PilihKategori from "$lib/components/PilihKategori.svelte";
 
 	let activeCategory = $state("Semua");
 
@@ -64,35 +65,19 @@
 	</div>
 </div>
 
-<section class="py-16 bg-slate-50 min-h-screen relative z-20">
+<section class="py-16 bg-slate-50 min-h-screen relative">
 	<div class="container">
 		<!-- Filter kategori -->
 		<div class="mt-10 mb-10">
 			<!-- Ponsel: satu pemilih, bukan 14 pil yang menumpuk ke bawah -->
 			<div class="md:hidden">
-				<label
-					for="filter-kategori"
-					class="block text-sm font-semibold text-slate-700 mb-2"
-				>
-					Kategori proyek
-				</label>
-				<div class="relative">
-					<select
-						id="filter-kategori"
-						bind:value={activeCategory}
-						class="w-full appearance-none bg-white border border-slate-300 rounded-xl py-3 pl-4 pr-11 text-base font-semibold text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
-					>
-						{#each categories as category}
-							<option value={category}
-								>{category} ({jumlah[category]})</option
-							>
-						{/each}
-					</select>
-					<ChevronDown
-						size={20}
-						class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500"
-					/>
-				</div>
+				<PilihKategori
+					id="filter-kategori"
+					label="Kategori proyek"
+					opsi={categories}
+					{jumlah}
+					bind:nilai={activeCategory}
+				/>
 			</div>
 
 			<!-- Layar lebar: pil tetap, cukup ruang untuk semuanya -->
