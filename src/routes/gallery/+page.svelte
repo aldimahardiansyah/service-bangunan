@@ -1,11 +1,23 @@
 <script lang="ts">
-	import { ArrowLeft, MapPin } from "lucide-svelte";
+	import { ArrowLeft, ChevronDown, MapPin } from "lucide-svelte";
 
 	let activeCategory = $state("Semua");
 
 	import { galleries, kategoriGaleri } from "$lib/data/galleries";
 
 	const categories = kategoriGaleri;
+
+	// Jumlah foto per kategori, supaya pengunjung tahu isinya sebelum memilih.
+	const jumlah: Record<string, number> = categories.reduce(
+		(acc, k) => {
+			acc[k] =
+				k === "Semua"
+					? galleries.length
+					: galleries.filter((g) => g.category === k).length;
+			return acc;
+		},
+		{} as Record<string, number>,
+	);
 
 	let filteredGalleries = $derived(
 		activeCategory === "Semua"
@@ -54,19 +66,60 @@
 
 <section class="py-16 bg-slate-50 min-h-screen relative z-20">
 	<div class="container">
-		<!-- Filters -->
-		<div class="flex flex-wrap items-center gap-3 mt-10 mb-10">
-			{#each categories as category}
-				<button
-					class="px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 {activeCategory ===
-					category
-						? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
-						: 'bg-white text-slate-600 hover:bg-blue-50 border border-slate-200'}"
-					onclick={() => (activeCategory = category)}
+		<!-- Filter kategori -->
+		<div class="mt-10 mb-10">
+			<!-- Ponsel: satu pemilih, bukan 14 pil yang menumpuk ke bawah -->
+			<div class="md:hidden">
+				<label
+					for="filter-kategori"
+					class="block text-sm font-semibold text-slate-700 mb-2"
 				>
-					{category}
-				</button>
-			{/each}
+					Kategori proyek
+				</label>
+				<div class="relative">
+					<select
+						id="filter-kategori"
+						bind:value={activeCategory}
+						class="w-full appearance-none bg-white border border-slate-300 rounded-xl py-3 pl-4 pr-11 text-base font-semibold text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+					>
+						{#each categories as category}
+							<option value={category}
+								>{category} ({jumlah[category]})</option
+							>
+						{/each}
+					</select>
+					<ChevronDown
+						size={20}
+						class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500"
+					/>
+				</div>
+			</div>
+
+			<!-- Layar lebar: pil tetap, cukup ruang untuk semuanya -->
+			<div class="hidden md:flex flex-wrap items-center gap-2.5">
+				{#each categories as category}
+					<button
+						class="px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-200 {activeCategory ===
+						category
+							? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+							: 'bg-white text-slate-600 hover:bg-blue-50 border border-slate-200'}"
+						onclick={() => (activeCategory = category)}
+					>
+						{category}
+						<span
+							class="ml-1 tabular-nums {activeCategory === category
+								? 'text-blue-200'
+								: 'text-slate-400'}">{jumlah[category]}</span
+						>
+					</button>
+				{/each}
+			</div>
+
+			<p class="mt-4 text-sm text-slate-500" aria-live="polite">
+				Menampilkan {filteredGalleries.length} foto{activeCategory === "Semua"
+					? ""
+					: ` untuk ${activeCategory}`}
+			</p>
 		</div>
 
 		<!-- Grid with Animation Container -->
